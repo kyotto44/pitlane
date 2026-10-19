@@ -2,6 +2,8 @@
 
 Portal de Fórmula 1 con pilotos, clasificación, escuderías, circuitos, fichas rápidas, multimedia y el resumen del último Gran Premio, más un club de fans y una página de preferencias. Empezó como laboratorio de HTML y CSS en la materia Construcción de Software (Ingeniería de Sistemas, Universidad Santo Tomás, Tunja) y se terminó como proyecto de portafolio.
 
+**Sitio publicado:** https://pitlane-kyotto44.netlify.app
+
 <p>
   <img src="docs/captura-escritorio.webp" alt="Portada de PitLane en escritorio: barra lateral con las diez secciones y titular 'Todo el mundo de la Fórmula 1, en un solo lugar' sobre una foto del paddock" width="600">
   <img src="docs/captura-movil.webp" alt="Portada de PitLane en un celular" width="180">
