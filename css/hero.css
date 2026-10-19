@@ -1,0 +1,91 @@
+/* Sección Hero */
+.hero {
+    position: relative;
+    padding: 140px 0 70px;
+
+    background-image:
+        linear-gradient(180deg, rgba(21, 21, 30, 0.78), rgba(21, 21, 30, 0.6)),
+        url("../imagenes/fondo_hero.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Texto del hero */
+.hero h1 {
+    color: white;
+}
+
+.hero .boton-secundario {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.hero .boton-secundario:hover {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: white;
+    color: white;
+}
+
+/* Grid del hero */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    align-items: center;
+
+}
+
+/* Etiqueta superior */
+.etiqueta-superior {
+    display: inline-block;
+    padding: 6px 14px;
+    margin-bottom: 20px;
+    border-radius: 999px;
+    background: var(--color-principal-suave);
+    color: var(--color-principal-oscuro);
+    font-family: "Fraunces", Georgia, serif;
+    font-style: italic;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.hero-contenido p {
+    margin: 20px 0 30px;
+    max-width: 46ch;
+    color: #c6b3b3;
+}
+
+.acciones-hero {
+    display: flex;
+    gap: 14px;
+}
+
+.codigo {
+    background: var(--color-principal-oscuro);
+    border-radius: var(--radio-lg);
+    overflow: hidden;
+    box-shadow: var(--sombra-media);
+}
+
+.codigo header {
+    padding: 14px 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #f7f4f4;
+    border-bottom: 2px solid black;
+}
+
+.codigo pre {
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.codigo code {
+    font-family: "Courier New", monospace;
+    font-size: 0.82rem;
+    color: #efcaca;
+    line-height: 1.6;
+}

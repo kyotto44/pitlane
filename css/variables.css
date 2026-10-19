@@ -1,0 +1,63 @@
+/* Variables CSS globales */
+:root {
+    /* Colores principales */
+    --color-principal: #e10600;
+    --color-principal-oscuro: #a30400;
+    --color-principal-suave: #fdeceb;
+    --color-principal_suave: var(--color-principal-suave);
+
+    --color-secundario: #15151e;
+    --color-acento: #00d2be;
+
+    /* Fondos y superficies */
+    --color-fondo: #f5f5f5;
+    --color-fondo_fondo: var(--color-fondo);
+    --color-superficie: #ffffff;
+
+    /* Texto */
+    --color-texto: #33333d;
+    --color-texto-suave: #6b6b76;
+    --color-texto_suave: var(--color-texto-suave);
+    --color-titulo: #15151e;
+    --color-titulo_titulo: var(--color-titulo);
+
+    --color-borde: #e4e4e8;
+
+    /* Código */
+    --color-codigo: #15151e;
+    --color-codigo-texto: #ffe3e0;
+
+    /* Dimensiones */
+    --alto-header: 130px;
+    --alto_header: var(--alto-header);
+    --ancho-sidebar: 255px;
+    --ancho_sidebar: var(--ancho-sidebar);
+    --ancho-contenido: 1180px;
+    --ancho_contenido: var(--ancho-contenido);
+
+    /* Bordes redondeados */
+    --radio-sm: 8px;
+    --radio-md: 14px;
+    --radio-lg: 24px;
+
+    /* Sombras */
+    /* Antes tenía 0.8 de opacidad (una sombra "suave" casi negra): se corrige a 0.1 */
+    --sombra-suave: 0px 4px 8px rgba(21, 21, 30, 0.1);
+    --sombra-media: 0px 20px 50px rgba(21, 21, 30, 0.14);
+
+    /* Transiciones */
+    --transicion: 0.25s ease;
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-panel: cubic-bezier(0.32, 0.72, 0, 1);
+
+    /* Color con el que se resaltan tus favoritos (se puede cambiar en Preferencias) */
+    --color-favorito: var(--color-principal);
+    --color-error: #a30400;
+
+    /* Capas (z-index) */
+    --capa-header: 1000;
+    --capa-velo: 1050;
+    --capa-menu: 1100;
+    --capa-modal: 2000;
+    --capa-saltar: 3000;
+}

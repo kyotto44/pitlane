@@ -1,0 +1,154 @@
+/* Menú móvil: en pantallas de hasta 850px la barra lateral se convierte en un panel
+   que se abre desde el botón "Menú" del header. Lo controla js/menu.js */
+
+/* Botón del header: oculto en escritorio, donde la barra lateral siempre está visible */
+.menu-boton {
+    display: none;
+}
+
+/* Velo que oscurece el contenido detrás del panel (lo crea js/menu.js) */
+.menu-velo {
+    display: none;
+}
+
+@media (max-width: 850px) {
+    .menu-boton {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+
+        min-height: 44px;
+        padding: 0 14px;
+
+        border: 1px solid var(--color-borde);
+        border-radius: var(--radio-sm);
+        background: var(--color-superficie);
+        color: var(--color-titulo);
+
+        font-size: 0.9rem;
+        font-weight: 700;
+        cursor: pointer;
+
+        transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.16s var(--ease-out);
+    }
+
+    .menu-boton:hover {
+        border-color: var(--color-principal);
+        color: var(--color-principal);
+    }
+
+    .menu-boton[aria-expanded="true"] {
+        background: var(--color-principal);
+        border-color: var(--color-principal);
+        color: white;
+    }
+
+    /* Ícono de tres líneas que se convierte en una X al abrir */
+    .menu-boton-icono {
+        position: relative;
+        width: 18px;
+        height: 12px;
+    }
+
+    .menu-boton-icono span {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        border-radius: 2px;
+        background: currentColor;
+        transition: transform 0.24s var(--ease-out), opacity 0.16s ease;
+    }
+
+    .menu-boton-icono span:nth-child(1) { top: 0; }
+    .menu-boton-icono span:nth-child(2) { top: 5px; }
+    .menu-boton-icono span:nth-child(3) { top: 10px; }
+
+    .menu-boton[aria-expanded="true"] .menu-boton-icono span:nth-child(1) {
+        transform: translateY(5px) rotate(45deg);
+    }
+
+    .menu-boton[aria-expanded="true"] .menu-boton-icono span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-boton[aria-expanded="true"] .menu-boton-icono span:nth-child(3) {
+        transform: translateY(-5px) rotate(-45deg);
+    }
+
+    /* La barra lateral pasa a ser un panel que entra desde la derecha, junto al botón */
+    .sidebar {
+        top: var(--alto-header);
+        right: 0;
+        left: auto;
+        z-index: var(--capa-menu);
+
+        width: min(320px, 86vw);
+
+        border-right: 0;
+        border-left: 1px solid var(--color-borde);
+        box-shadow: -24px 0 48px rgba(21, 21, 30, 0.16);
+        overscroll-behavior: contain;
+
+        visibility: hidden;
+        transform: translateX(100%);
+        transition: transform 0.28s var(--ease-panel), visibility 0s linear 0.28s;
+    }
+
+    .sidebar.abierto {
+        visibility: visible;
+        transform: none;
+        transition: transform 0.28s var(--ease-panel), visibility 0s;
+    }
+
+    .sidebar-grupo a {
+        min-height: 48px;
+        padding: 12px 14px;
+        font-size: 0.95rem;
+    }
+
+    .menu-velo {
+        display: block;
+        position: fixed;
+        inset: var(--alto-header) 0 0 0;
+        z-index: var(--capa-velo);
+
+        background: rgba(21, 21, 30, 0.45);
+
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.28s ease, visibility 0s linear 0.28s;
+    }
+
+    .menu-velo.visible {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.28s ease, visibility 0s;
+    }
+
+    /* Con el panel abierto la página de fondo no se desplaza */
+    html.menu-abierto {
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 850px) and (prefers-reduced-motion: reduce) {
+    .sidebar,
+    .sidebar.abierto {
+        transform: none;
+    }
+
+    .sidebar {
+        opacity: 0;
+        transition: opacity 0.15s ease, visibility 0s linear 0.15s;
+    }
+
+    .sidebar.abierto {
+        opacity: 1;
+        transition: opacity 0.15s ease, visibility 0s;
+    }
+
+    .menu-boton-icono span {
+        transition: opacity 0.15s ease;
+    }
+}

@@ -1,0 +1,151 @@
+<!doctype html>
+<!-- Página de registro para el club de fans de PitLane -->
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Club de fans | PitLane</title>
+    <meta name="description" content="Regístrate en el club de fans de PitLane: alertas antes de cada clasificación, sorteos para el Paddock Club y contenido de tu escudería favorita." />
+    <meta property="og:title" content="Club de fans | PitLane" />
+    <meta property="og:description" content="Regístrate en el club de fans de PitLane: alertas antes de cada clasificación, sorteos para el Paddock Club y contenido de tu escudería favorita." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:site_name" content="PitLane" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,500;1,600&amp;family=Orbitron:wght@700;800;900&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/almacen.js"></script>
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/favoritos.js"></script>
+    <script defer src="js/validacion.js"></script>
+    <script defer src="js/club.js"></script>
+  </head>
+
+  <body>
+    <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+
+    <header class="topbar">
+      <a href="index.html" class="logo">
+        <img src="imagenes/logo.webp" alt="" class="logo-icono" width="220" height="220">
+        <span>Pit<strong>Lane</strong></span>
+      </a>
+
+      <nav aria-label="Menú principal">
+        <ul class="menu-superior">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="pilotos.html">Pilotos</a></li>
+          <li><a href="clasificacion.html">Clasificación</a></li>
+          <li><a href="equipos.html">Escuderías</a></li>
+          <li><a href="multimedia.html">Multimedia</a></li>
+          <li><a href="resumen.html">Resumen del GP</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu-lateral">
+        <span class="menu-boton-icono" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>Menú</span>
+      </button>
+    </header>
+
+    <aside class="sidebar" id="menu-lateral">
+      <nav aria-label="Secciones de PitLane">
+        <div class="sidebar-grupo">
+          <p class="sidebar-titulo">PITLANE</p>
+          <a href="index.html"><span>01</span>Inicio</a>
+          <a href="pilotos.html"><span>02</span>Pilotos</a>
+          <a href="clasificacion.html"><span>03</span>Clasificación</a>
+          <a href="club.html" class="activo" aria-current="page"><span>04</span>Club de fans</a>
+          <a href="preferencias.html"><span>05</span>Preferencias</a>
+          <a href="equipos.html"><span>06</span>Escuderías</a>
+          <a href="circuitos.html"><span>07</span>Circuitos</a>
+          <a href="fichas.html"><span>08</span>Fichas rápidas</a>
+          <a href="multimedia.html"><span>09</span>Multimedia</a>
+          <a href="resumen.html"><span>10</span>Resumen del GP</a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content" id="contenido" tabindex="-1">
+      <section class="seccion">
+        <div class="contenedor">
+          <h1 class="titulo-pagina titulo-seccion">Únete al club de fans</h1>
+
+          <p class="intro-seccion">
+            Regístrate y recibe alertas antes de cada clasificación, sorteos
+            de entradas para el Paddock Club y contenido exclusivo de tu
+            escudería favorita.
+          </p>
+
+          <form class="formulario" id="form-club">
+            <div class="fila-formulario">
+              <div class="grupo-formulario">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Ayrton Senna" autocomplete="name" maxlength="80" required />
+              </div>
+
+              <div class="grupo-formulario">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" placeholder="fan@ejemplo.com" autocomplete="email" maxlength="120" required />
+              </div>
+            </div>
+
+            <div class="fila-formulario">
+              <div class="grupo-formulario">
+                <label for="escuderia">Escudería favorita</label>
+                <select id="escuderia" name="escuderia" required>
+                  <option value="">Selecciona una escudería</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="ferrari">Scuderia Ferrari</option>
+                  <option value="mclaren">McLaren</option>
+                  <option value="redbull">Red Bull Racing</option>
+                  <option value="williams">Williams</option>
+                  <option value="astonmartin">Aston Martin</option>
+                  <option value="racingbulls">Racing Bulls</option>
+                  <option value="alpine">Alpine</option>
+                  <option value="haas">Haas</option>
+                  <option value="audi">Audi (Sauber)</option>
+                  <option value="cadillac">Cadillac</option>
+                </select>
+              </div>
+
+              <div class="grupo-formulario">
+                <label for="gp">Próximo GP al que asistirás</label>
+                <input type="text" id="gp" name="gp" placeholder="Ej. GP de Italia" maxlength="60" />
+              </div>
+            </div>
+
+            <div class="grupo-formulario">
+              <label for="mensaje">Cuéntanos por qué eres fan</label>
+              <textarea id="mensaje" name="mensaje" rows="4" maxlength="500" placeholder="Desde qué temporada sigues la F1, tu piloto favorito..."></textarea>
+            </div>
+
+            <div class="grupo-formulario">
+              <label class="casilla" for="terminos">
+                <input type="checkbox" id="terminos" name="terminos" required />
+                <span>Acepto recibir novedades del club por correo</span>
+              </label>
+            </div>
+
+            <button type="submit" class="boton-formulario">Confirmar registro</button>
+          </form>
+
+          <div class="estado-exito" id="club-exito" tabindex="-1" hidden>
+            <span class="badge">REGISTRO CONFIRMADO</span>
+            <h2 class="estado-exito-titulo">Ya eres parte del club, <span data-campo="nombre"></span>.</h2>
+            <p>
+              Registramos el correo <strong data-campo="correo"></strong> con
+              <strong data-campo="escuderiaNombre"></strong> como tu escudería favorita.
+            </p>
+            <p class="nota-campo" id="club-aviso">Tus datos quedaron guardados solo en este navegador.</p>
+            <div class="estado-acciones">
+              <button type="button" class="boton boton-secundario" id="club-editar">Editar mis datos</button>
+              <a href="preferencias.html" class="boton boton-principal">Configurar mis preferencias</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!doctype html>
+<!-- Página de equipos/escuderías y clasificación de constructores -->
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Escuderías | PitLane</title>
+    <meta name="description" content="Parrilla de salida de la última clasificación y campeonato de constructores de Fórmula 1 2026 con las once escuderías." />
+    <meta property="og:title" content="Escuderías | PitLane" />
+    <meta property="og:description" content="Parrilla de salida de la última clasificación y campeonato de constructores de Fórmula 1 2026 con las once escuderías." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:site_name" content="PitLane" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,500;1,600&amp;family=Orbitron:wght@700;800;900&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/almacen.js"></script>
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/favoritos.js"></script>
+  </head>
+
+  <body>
+    <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+
+    <header class="topbar">
+      <a href="index.html" class="logo">
+        <img src="imagenes/logo.webp" alt="" class="logo-icono" width="220" height="220">
+        <span>Pit<strong>Lane</strong></span>
+      </a>
+
+      <nav aria-label="Menú principal">
+        <ul class="menu-superior">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="pilotos.html">Pilotos</a></li>
+          <li><a href="clasificacion.html">Clasificación</a></li>
+          <li><a href="equipos.html" aria-current="page">Escuderías</a></li>
+          <li><a href="multimedia.html">Multimedia</a></li>
+          <li><a href="resumen.html">Resumen del GP</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu-lateral">
+        <span class="menu-boton-icono" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>Menú</span>
+      </button>
+    </header>
+
+    <aside class="sidebar" id="menu-lateral">
+      <nav aria-label="Secciones de PitLane">
+        <div class="sidebar-grupo">
+          <p class="sidebar-titulo">PITLANE</p>
+          <a href="index.html"><span>01</span>Inicio</a>
+          <a href="pilotos.html"><span>02</span>Pilotos</a>
+          <a href="clasificacion.html"><span>03</span>Clasificación</a>
+          <a href="club.html"><span>04</span>Club de fans</a>
+          <a href="preferencias.html"><span>05</span>Preferencias</a>
+          <a href="equipos.html" class="activo" aria-current="page"><span>06</span>Escuderías</a>
+          <a href="circuitos.html"><span>07</span>Circuitos</a>
+          <a href="fichas.html"><span>08</span>Fichas rápidas</a>
+          <a href="multimedia.html"><span>09</span>Multimedia</a>
+          <a href="resumen.html"><span>10</span>Resumen del GP</a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content" id="contenido" tabindex="-1">
+      <section class="seccion">
+        <div class="contenedor">
+          <h1 class="titulo-pagina titulo-seccion">Parrilla de salida — última clasificación</h1>
+
+          <p class="intro-seccion">
+            Los cinco primeros clasificados de cara a la próxima carrera.
+          </p>
+
+          <div class="parrilla-salida">
+            <div class="parrilla-puesto equipo-mercedes" data-piloto="antonelli">
+              <span class="parrilla-numero">P1</span>
+              <img src="imagenes/pilotos/antonelli-mini.webp" alt="Kimi Antonelli" class="parrilla-foto" width="144" height="96" decoding="async">
+              <div class="parrilla-datos">
+                <strong>Antonelli</strong>
+                <span>Mercedes</span>
+              </div>
+            </div>
+
+            <div class="parrilla-puesto equipo-mclaren" data-piloto="norris">
+              <span class="parrilla-numero">P2</span>
+              <img src="imagenes/pilotos/norris-mini.webp" alt="Lando Norris" class="parrilla-foto" width="144" height="96" decoding="async">
+              <div class="parrilla-datos">
+                <strong>Norris</strong>
+                <span>McLaren</span>
+              </div>
+            </div>
+
+            <div class="parrilla-puesto equipo-mercedes" data-piloto="russell">
+              <span class="parrilla-numero">P3</span>
+              <img src="imagenes/pilotos/russell-mini.webp" alt="George Russell" class="parrilla-foto" width="144" height="96" decoding="async">
+              <div class="parrilla-datos">
+                <strong>Russell</strong>
+                <span>Mercedes</span>
+              </div>
+            </div>
+
+            <div class="parrilla-puesto equipo-ferrari" data-piloto="hamilton">
+              <span class="parrilla-numero">P4</span>
+              <img src="imagenes/pilotos/hamilton-mini.webp" alt="Lewis Hamilton" class="parrilla-foto" width="144" height="96" decoding="async">
+              <div class="parrilla-datos">
+                <strong>Hamilton</strong>
+                <span>Ferrari</span>
+              </div>
+            </div>
+
+            <div class="parrilla-puesto equipo-ferrari" data-piloto="leclerc">
+              <span class="parrilla-numero">P5</span>
+              <img src="imagenes/pilotos/leclerc-mini.webp" alt="Charles Leclerc" class="parrilla-foto" width="144" height="96" decoding="async">
+              <div class="parrilla-datos">
+                <strong>Leclerc</strong>
+                <span>Ferrari</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion" id="grid">
+        <div class="contenedor">
+          <h2 class="titulo-seccion">Campeonato de constructores 2026</h2>
+
+          <p class="intro-seccion">
+            Tras el GP de Países Bajos (ronda 12 de 23). Mercedes domina con
+            87 puntos de ventaja sobre Ferrari.
+          </p>
+
+          <div class="grid-demo">
+            <div class="grid-item grid-item-imagen" data-escuderia="mercedes"><img src="imagenes/equipos/mercedes.webp" alt="Logo de Mercedes" class="grid-item-fondo" width="700" height="177" loading="lazy" decoding="async"><span>Mercedes — 425 pts</span></div>
+            <div class="grid-item grid-item-imagen" data-escuderia="ferrari"><img src="imagenes/equipos/ferrari.webp" alt="Logo de Ferrari" class="grid-item-fondo" width="376" height="664" loading="lazy" decoding="async"><span>Ferrari — 338 pts</span></div>
+            <div class="grid-item grid-item-imagen" data-escuderia="mclaren"><img src="imagenes/equipos/mclaren.webp" alt="Logo de McLaren" class="grid-item-fondo" width="700" height="210" loading="lazy" decoding="async"><span>McLaren — 263 pts</span></div>
+            <div class="grid-item grid-item-imagen" data-escuderia="redbull"><img src="imagenes/equipos/redbull.webp" alt="Logo de Red Bull" class="grid-item-fondo" width="360" height="219" loading="lazy" decoding="async"><span>Red Bull — 186 pts</span></div>
+            <div class="grid-item grid-item-imagen" data-escuderia="williams"><img src="imagenes/equipos/williams.webp" alt="Logo de Williams" class="grid-item-fondo" width="720" height="546" loading="lazy" decoding="async"><span>Williams</span></div>
+            <div class="grid-item grid-item-imagen" data-escuderia="astonmartin"><img src="imagenes/equipos/astonmartin.webp" alt="Logo de Aston Martin" class="grid-item-fondo" width="296" height="148" loading="lazy" decoding="async"><span>Aston Martin</span></div>
+            <div class="grid-item grid-item-imagen" data-escuderia="racingbulls"><img src="imagenes/equipos/racingbulls.webp" alt="Logo de Racing Bulls" class="grid-item-fondo" width="169" height="148" loading="lazy" decoding="async"><span>Racing Bulls</span></div>
+            <div class="grid-item grid-item-imagen" data-escuderia="alpine"><img src="imagenes/equipos/alpine.webp" alt="Logo de Alpine" class="grid-item-fondo" width="720" height="344" loading="lazy" decoding="async"><span>Alpine</span></div>
+            <div class="grid-item grid-item-imagen" data-escuderia="haas"><img src="imagenes/equipos/haas.webp" alt="Logo de Haas" class="grid-item-fondo" width="720" height="636" loading="lazy" decoding="async"><span>Haas</span></div>
+            <div class="grid-item grid-item-imagen" data-escuderia="audi"><img src="imagenes/equipos/audi.webp" alt="Logo de Audi (Sauber)" class="grid-item-fondo" width="616" height="569" loading="lazy" decoding="async"><span>Audi (Sauber)</span></div>
+            <div class="grid-item grid-item-imagen" data-escuderia="cadillac"><img src="imagenes/equipos/cadillac.webp" alt="Logo de Cadillac" class="grid-item-fondo" width="720" height="370" loading="lazy" decoding="async"><span>Cadillac</span></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

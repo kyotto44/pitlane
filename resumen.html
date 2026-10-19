@@ -1,0 +1,189 @@
+<!doctype html>
+<!-- Página con resumen de la última carrera disputada -->
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resumen del GP | PitLane</title>
+    <meta name="description" content="Resumen del GP de Países Bajos 2026 en Zandvoort: podio, lo que viene en Monza y tu predicción para el GP de Italia." />
+    <meta property="og:title" content="Resumen del GP | PitLane" />
+    <meta property="og:description" content="Resumen del GP de Países Bajos 2026 en Zandvoort: podio, lo que viene en Monza y tu predicción para el GP de Italia." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:site_name" content="PitLane" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,500;1,600&amp;family=Orbitron:wght@700;800;900&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/almacen.js"></script>
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/favoritos.js"></script>
+    <script defer src="js/validacion.js"></script>
+    <script defer src="js/prediccion.js"></script>
+    <script defer src="js/modales.js"></script>
+  </head>
+
+  <body>
+    <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+
+    <header class="topbar">
+      <a href="index.html" class="logo">
+        <img src="imagenes/logo.webp" alt="" class="logo-icono" width="220" height="220">
+        <span>Pit<strong>Lane</strong></span>
+      </a>
+
+      <nav aria-label="Menú principal">
+        <ul class="menu-superior">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="pilotos.html">Pilotos</a></li>
+          <li><a href="clasificacion.html">Clasificación</a></li>
+          <li><a href="equipos.html">Escuderías</a></li>
+          <li><a href="multimedia.html">Multimedia</a></li>
+          <li><a href="resumen.html" aria-current="page">Resumen del GP</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu-lateral">
+        <span class="menu-boton-icono" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>Menú</span>
+      </button>
+    </header>
+
+    <aside class="sidebar" id="menu-lateral">
+      <nav aria-label="Secciones de PitLane">
+        <div class="sidebar-grupo">
+          <p class="sidebar-titulo">PITLANE</p>
+          <a href="index.html"><span>01</span>Inicio</a>
+          <a href="pilotos.html"><span>02</span>Pilotos</a>
+          <a href="clasificacion.html"><span>03</span>Clasificación</a>
+          <a href="club.html"><span>04</span>Club de fans</a>
+          <a href="preferencias.html"><span>05</span>Preferencias</a>
+          <a href="equipos.html"><span>06</span>Escuderías</a>
+          <a href="circuitos.html"><span>07</span>Circuitos</a>
+          <a href="fichas.html"><span>08</span>Fichas rápidas</a>
+          <a href="multimedia.html"><span>09</span>Multimedia</a>
+          <a href="resumen.html" class="activo" aria-current="page"><span>10</span>Resumen del GP</a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content" id="contenido" tabindex="-1">
+      <section class="seccion">
+        <div class="contenedor">
+          <h1 class="titulo-pagina titulo-seccion">GP de Países Bajos — resumen</h1>
+
+          <div class="grid-dos-columnas">
+            <article class="tarjeta">
+              <h2 class="h3">Lando Norris se lleva Zandvoort</h2>
+              <p>
+                Segunda victoria consecutiva para el británico, superando a
+                Antonelli en pista tras un domingo caótico marcado por el
+                accidente de Verstappen en la primera vuelta.
+              </p>
+              <a href="#modal-resumen" class="boton boton-principal">Leer más<span class="sr-only"> sobre la victoria de Norris en Zandvoort</span></a>
+            </article>
+
+            <div class="caja-info">
+              <h2 class="h3">Lo que viene</h2>
+              <p>
+                La Fórmula 1 llega a Monza para el GP de Italia el 6 de
+                septiembre, con Ferrari corriendo frente a su afición e
+                intentando frenar la ventaja de Mercedes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion">
+        <div class="contenedor">
+          <h2 class="titulo-seccion">Podio de la carrera</h2>
+
+          <div class="tabla-contenedor">
+            <table>
+              <caption class="sr-only">Podio del GP de Países Bajos</caption>
+              <thead>
+                <tr><th scope="col">Pos.</th><th scope="col">Piloto</th><th scope="col">Escudería</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td data-piloto="norris">Lando Norris</td><td data-escuderia="mclaren">McLaren</td></tr>
+                <tr><td>2</td><td data-piloto="antonelli">Kimi Antonelli</td><td data-escuderia="mercedes">Mercedes</td></tr>
+                <tr><td>3</td><td data-piloto="russell">George Russell</td><td data-escuderia="mercedes">Mercedes</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion">
+        <div class="contenedor">
+          <h2 class="titulo-seccion">Vota por tu podio en Monza</h2>
+
+          <form class="formulario" id="form-prediccion">
+            <div class="grupo-formulario">
+              <label for="prediccion">¿Quién gana el GP de Italia?</label>
+              <select id="prediccion" name="prediccion" required>
+                <option value="">Selecciona un piloto</option>
+                <option value="antonelli">Kimi Antonelli</option>
+                <option value="norris">Lando Norris</option>
+                <option value="leclerc">Charles Leclerc</option>
+              </select>
+            </div>
+
+            <div class="grupo-formulario">
+              <div class="etiqueta-con-valor">
+                <label for="confianza">Nivel de confianza en tu predicción</label>
+                <output class="valor-rango" id="confianza-valor" for="confianza">70 %</output>
+              </div>
+              <input type="range" id="confianza" name="confianza" min="0" max="100" value="70" />
+            </div>
+
+            <button type="submit" class="boton-formulario">Enviar predicción</button>
+          </form>
+
+          <div class="estado-exito" id="prediccion-exito" tabindex="-1" hidden>
+            <span class="badge">PREDICCIÓN GUARDADA</span>
+            <h3 class="estado-exito-titulo">Tu ganador en Monza: <span data-campo="piloto"></span></h3>
+            <p>Confianza en tu predicción: <strong data-campo="confianza"></strong>.</p>
+            <p class="nota-campo" id="prediccion-aviso">La guardamos en este navegador para que la compares con el resultado.</p>
+            <div class="estado-acciones">
+              <button type="button" class="boton boton-secundario" id="prediccion-cambiar">Cambiar predicción</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion">
+        <div class="contenedor">
+          <h2 class="titulo-seccion">Campeonato de constructores</h2>
+
+          <div class="grid-demo">
+            <div class="grid-item grid-item-imagen" data-escuderia="mercedes"><img src="imagenes/equipos/mercedes.webp" alt="Logo de Mercedes" class="grid-item-fondo" width="700" height="177" loading="lazy" decoding="async"><span>Mercedes — 425 pts</span></div>
+            <div class="grid-item grid-item-imagen" data-escuderia="ferrari"><img src="imagenes/equipos/ferrari.webp" alt="Logo de Ferrari" class="grid-item-fondo" width="376" height="664" loading="lazy" decoding="async"><span>Ferrari — 338 pts</span></div>
+            <div class="grid-item grid-item-imagen" data-escuderia="mclaren"><img src="imagenes/equipos/mclaren.webp" alt="Logo de McLaren" class="grid-item-fondo" width="700" height="210" loading="lazy" decoding="async"><span>McLaren — 263 pts</span></div>
+            <div class="grid-item grid-item-imagen" data-escuderia="redbull"><img src="imagenes/equipos/redbull.webp" alt="Logo de Red Bull" class="grid-item-fondo" width="360" height="219" loading="lazy" decoding="async"><span>Red Bull — 186 pts</span></div>
+          </div>
+        </div>
+      </section>
+
+      <div id="modal-resumen" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-resumen-titulo">
+        <a href="#cerrar" class="modal-fondo" tabindex="-1" aria-hidden="true"></a>
+        <article class="modal-contenido">
+          <header class="modal-header">
+            <h3 id="modal-resumen-titulo">Resumen completo — Zandvoort</h3>
+            <a href="#cerrar" class="modal-cerrar" aria-label="Cerrar ventana">&times;</a>
+          </header>
+          <div class="modal-body">
+            <p>Norris venció tras superar a Antonelli en pista; Russell
+            completó el podio. Antonelli sale de Países Bajos con 59 puntos
+            de ventaja sobre sus dos perseguidores más cercanos.</p>
+          </div>
+          <footer class="modal-footer">
+            <a href="#cerrar" class="boton boton-secundario">Cerrar</a>
+          </footer>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>

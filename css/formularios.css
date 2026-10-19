@@ -1,0 +1,483 @@
+/* Formulario principal */
+.formulario {
+    padding: 30px;
+    background: white;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-lg);
+    box-shadow: var(--sombra-suave);
+}
+
+/* Grupo de campo */
+.grupo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 18px;
+}
+
+/* Etiquetas */
+.grupo-formulario label,
+fieldset legend {
+    color: var(--color-titulo);
+    font-size: 0.84rem;
+    font-weight: 750;
+}
+
+/* Campos de entrada */
+.grupo-formulario input,
+.grupo-formulario select,
+.grupo-formulario textarea {
+    width: 100%;
+    padding: 12px 14px;
+    background: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    transition: var(--transicion);
+}
+
+.grupo-formulario input:focus,
+.grupo-formulario select:focus,
+.grupo-formulario textarea:focus {
+    border-color: var(--color-principal);
+    box-shadow: 0 0 0 3px rgba(225, 6, 0, 0.12);
+}
+
+.fila-formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.opcion {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-height: 44px;
+}
+
+.opcion input {
+    accent-color: var(--color-principal);
+}
+
+.boton-formulario {
+    width: 100%;
+    padding: 12px 18px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--color-principal);
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background-color var(--transicion), transform 0.16s var(--ease-out);
+}
+
+.boton-formulario:hover {
+    background: var(--color-principal-oscuro);
+}
+
+.catalogo-inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.input-card {
+    padding: 24px;
+    background: white;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-md);
+}
+
+.input-card label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+/* Las opciones (radio y casillas) ocupan toda la fila para que sean fáciles de tocar */
+.input-card .opcion label {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-height: 44px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+/* Título de un grupo de opciones (antes era un <label> sin campo asociado) */
+.input-card .etiqueta-grupo {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+/* Campos dentro de las tarjetas de Preferencias */
+.input-card input[type="text"],
+.input-card input[type="email"],
+.input-card input[type="password"],
+.input-card input[type="number"],
+.input-card input[type="tel"],
+.input-card input[type="search"],
+.input-card input[type="date"],
+.input-card select {
+    width: 100%;
+}
+
+.input-card select {
+    cursor: pointer;
+}
+
+/* En pantallas táctiles los campos sin borde tienen un área de toque de al menos 44px */
+@media (pointer: coarse) {
+    .input-card input[type="text"],
+    .input-card input[type="email"],
+    .input-card input[type="password"],
+    .input-card input[type="number"],
+    .input-card input[type="tel"],
+    .input-card input[type="search"],
+    .input-card input[type="date"],
+    .input-card select {
+        min-height: 44px;
+    }
+}
+
+/* Deslizadores y selectores de color con el rojo de la marca */
+input[type="range"] {
+    accent-color: var(--color-principal);
+    cursor: pointer;
+}
+
+.grupo-formulario input[type="range"] {
+    padding-inline: 0;
+    border-color: transparent;
+    background: transparent;
+}
+
+.grupo-formulario input[type="range"]:focus {
+    box-shadow: none;
+}
+
+/* Etiqueta con el valor actual del deslizador al lado */
+.etiqueta-con-valor {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.input-card .etiqueta-con-valor label {
+    margin-bottom: 10px;
+}
+
+.valor-rango {
+    font-family: "Courier New", monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-principal-oscuro);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Casilla de aceptación: casilla a la izquierda y texto al lado */
+.grupo-formulario .casilla {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 44px;
+    cursor: pointer;
+}
+
+.grupo-formulario .casilla input[type="checkbox"] {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: 0;
+    accent-color: var(--color-principal);
+    cursor: pointer;
+}
+
+.grupo-formulario .casilla input[type="checkbox"]:focus {
+    box-shadow: none;
+}
+
+/* Texto de ayuda bajo un campo */
+.nota-campo {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: var(--color-texto-suave);
+}
+
+/* Errores de validación en línea */
+.grupo-formulario [aria-invalid="true"],
+.input-card [aria-invalid="true"] {
+    border-color: var(--color-error);
+    background: #fffafa;
+}
+
+.input-card input[aria-invalid="true"]:not([type="file"]):not([type="color"]):not([type="range"]) {
+    padding: 8px 10px;
+    border: 1px solid var(--color-error);
+    border-radius: 8px;
+}
+
+.error-campo {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 6px;
+
+    color: var(--color-error);
+    font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.error-campo::before {
+    content: "!";
+    flex-shrink: 0;
+    width: 17px;
+    height: 17px;
+    margin-top: 1px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+    background: var(--color-error);
+    color: white;
+
+    font-family: "Courier New", monospace;
+    font-size: 0.72rem;
+}
+
+/* Estado de éxito tras enviar un formulario */
+.estado-exito {
+    padding: 30px;
+
+    background: white;
+    border: 1px solid var(--color-borde);
+    border-left: 5px solid var(--color-principal);
+    border-radius: var(--radio-lg);
+    box-shadow: var(--sombra-suave);
+
+    animation: aparecer 0.32s var(--ease-out);
+}
+
+.estado-exito:focus {
+    outline: none;
+}
+
+.estado-exito .badge {
+    margin-bottom: 12px;
+}
+
+.estado-exito-titulo {
+    margin-bottom: 10px;
+    font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+    overflow-wrap: anywhere;
+}
+
+.estado-exito p {
+    color: var(--color-texto-suave);
+    overflow-wrap: anywhere;
+}
+
+.estado-exito strong {
+    color: var(--color-texto);
+}
+
+.estado-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.estado-acciones .boton {
+    cursor: pointer;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+}
+
+/* Preferencias: barra de acciones y mensaje de estado */
+.acciones-preferencias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.acciones-preferencias .boton-formulario {
+    flex: 1 1 260px;
+    width: auto;
+    min-height: 48px;
+}
+
+.acciones-preferencias .boton {
+    min-height: 48px;
+    cursor: pointer;
+}
+
+.estado-formulario:empty {
+    display: none;
+}
+
+.estado-formulario {
+    margin-top: 18px;
+    padding: 16px 20px;
+
+    border-radius: var(--radio-md);
+    border-left: 5px solid var(--color-principal);
+    background: var(--color-principal-suave);
+    color: var(--color-texto);
+
+    font-size: 0.92rem;
+    animation: aparecer 0.32s var(--ease-out);
+}
+
+.estado-formulario a {
+    color: var(--color-principal-oscuro);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.estado-formulario.es-error {
+    border-left-color: var(--color-error);
+    background: #fff5f4;
+}
+
+/* Vista previa de la foto de perfil */
+.foto-vista {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 14px;
+}
+
+.foto-vista[hidden] {
+    display: none;
+}
+
+.foto-vista img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 0 3px var(--color-superficie), 0 0 0 4px var(--color-borde);
+}
+
+.boton-texto {
+    min-height: 44px;
+    padding: 0 6px;
+    color: var(--color-principal-oscuro);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+}
+
+.boton-texto:hover {
+    color: var(--color-principal);
+}
+
+/* Buscador de pilotos y escuderías en Preferencias */
+.busqueda-estado {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: var(--color-texto-suave);
+}
+
+.busqueda-estado:empty {
+    display: none;
+}
+
+.resultados-busqueda {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.resultados-busqueda button {
+    width: 100%;
+    min-height: 44px;
+    padding: 8px 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-sm);
+    background: var(--color-superficie);
+
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.resultados-busqueda button:hover {
+    border-color: var(--color-principal);
+    background: var(--color-principal-suave);
+}
+
+.resultados-busqueda strong {
+    font-size: 0.9rem;
+    color: var(--color-titulo);
+}
+
+.resultados-busqueda span {
+    font-size: 0.78rem;
+    color: var(--color-texto-suave);
+    white-space: nowrap;
+}
+
+.resultados-busqueda button[aria-pressed="true"] {
+    border-color: var(--color-principal);
+    background: var(--color-principal-suave);
+}
+
+/* Tarjeta resaltada un momento cuando el buscador cambia su valor */
+.input-card {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-card.recien-cambiado {
+    border-color: var(--color-principal);
+    box-shadow: 0 0 0 3px var(--color-principal-suave);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .estado-exito,
+    .estado-formulario {
+        animation-name: aparecer-suave;
+    }
+
+    @keyframes aparecer-suave {
+        from {
+            opacity: 0;
+        }
+    }
+}
+
+/* Las tarjetas de Preferencias no se desbordan en pantallas angostas
+   (el campo de archivo tiene un ancho mínimo propio de ~350px en móviles) */
+.catalogo-inputs > * {
+    min-width: 0;
+}
+
+.input-card input[type="file"] {
+    max-width: 100%;
+    font-size: 0.9rem;
+    cursor: pointer;
+}

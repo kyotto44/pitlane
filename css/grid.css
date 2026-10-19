@@ -1,0 +1,267 @@
+/* Demostración Flex */
+.flex-demo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 24px;
+    background: white;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-md);
+}
+
+.flex-demo div {
+    flex: 1 1 160px;
+    padding: 22px;
+    background: var(--color-principal-suave);
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 800;
+}
+
+/* Demostración Grid */
+.grid-demo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+}
+
+.grid-item {
+    min-height: 100px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    background: white;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-lg);
+    box-shadow: var(--sombra-suave);
+    font-weight: 700;
+}
+
+.grid-item-imagen {
+    position: relative;
+    overflow: hidden;
+    min-height: 140px;
+    color: white;
+}
+
+.grid-item-imagen .grid-item-fondo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.grid-item-imagen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.8));
+    z-index: 1;
+}
+
+.grid-item-imagen > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Sombra en el texto para que se lea sobre logos claros */
+.grid-item-imagen span {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.flex-demo .grid-item {
+    flex-direction: row;
+    gap: 12px;
+}
+
+.mini-foto {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.galeria-bolitas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 28px;
+    align-items: center;
+    justify-items: center;
+}
+
+.bolita-item {
+    display: block;
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.pista-ayuda {
+    margin-top: 22px;
+    color: var(--color-texto-suave);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.bolita {
+    width: 120px;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    margin-bottom: 12px;
+    padding: 16px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 8px solid white;
+    background: white;
+    box-shadow: 0 0 0 1px var(--color-borde), 0 15px 30px rgba(15, 23, 42, 0.12);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 900;
+    overflow: hidden;
+    transition: var(--transicion);
+}
+
+.bolita img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: var(--transicion);
+}
+
+.bolita:hover img {
+    transform: scale(1.08);
+}
+
+.bolita:hover {
+    transform: translateY(-6px) scale(1.05);
+}
+
+.bolita-item p {
+    color: var(--color-texto-suave);
+    font-size: 0.85rem;
+}
+
+.carrusel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 5px 24px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.carrusel-item {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+    padding: 24px;
+    background: white;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-lg);
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicion);
+}
+
+.carrusel-item:hover {
+    transform: translateY(-5px);
+}
+
+.carrusel::-webkit-scrollbar {
+    height: 10px;
+}
+
+.carrusel::-webkit-scrollbar-track {
+    background: var(--color-principal-suave);
+    border-radius: 999px;
+}
+
+.carrusel::-webkit-scrollbar-thumb {
+    background: var(--color-principal);
+    border-radius: 999px;
+}
+
+/* Parrilla de salida */
+.parrilla-salida {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 16px;
+    max-width: 640px;
+}
+
+.parrilla-puesto {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    background: white;
+    border: 1px solid var(--color-borde);
+    border-left: 5px solid var(--color-equipo, var(--color-principal));
+    border-radius: var(--radio-md);
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicion);
+}
+
+.parrilla-puesto:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-media);
+}
+
+.parrilla-puesto:nth-child(even) {
+    margin-top: 34px;
+}
+
+.parrilla-numero {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--color-equipo, var(--color-principal));
+    color: white;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 800;
+    font-size: 0.8rem;
+}
+
+.parrilla-foto {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 3px var(--color-fondo), 0 0 0 4px var(--color-borde);
+}
+
+.parrilla-datos {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    min-width: 0;
+}
+
+.parrilla-datos strong {
+    font-size: 0.95rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.parrilla-datos span {
+    font-size: 0.78rem;
+    color: var(--color-texto-suave);
+}
+
+.equipo-mercedes { --color-equipo: #00d2be; }
+.equipo-mclaren { --color-equipo: #ff8000; }
+.equipo-ferrari { --color-equipo: #e8002d; }
+.equipo-redbull { --color-equipo: #3671c6; }
+.equipo-williams { --color-equipo: #64c4ff; }

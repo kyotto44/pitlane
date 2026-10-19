@@ -1,0 +1,129 @@
+/* Favoritos: resaltado del piloto y la escudería que eliges en Preferencias
+   (lo aplica js/favoritos.js en Pilotos, Clasificación, Escuderías y Resumen) */
+
+/* Etiqueta "Tu piloto" / "Tu escudería" */
+.marca-favorito {
+    display: inline-block;
+    padding: 3px 8px;
+
+    border-radius: 6px;
+    background: var(--color-principal);
+    color: white;
+
+    font-family: "Courier New", monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.4;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Tarjetas y logos: anillo con el color elegido y etiqueta en la esquina */
+.piloto-tarjeta.es-favorito,
+.grid-item.es-favorito,
+.parrilla-puesto.es-favorito {
+    outline: 3px solid var(--color-favorito);
+    outline-offset: 3px;
+}
+
+.piloto-tarjeta > .marca-favorito,
+.grid-item > .marca-favorito {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 3;
+}
+
+.parrilla-datos .marca-favorito {
+    align-self: flex-start;
+    margin-top: 4px;
+}
+
+/* Tablas: la fila de tu piloto se marca con fondo suave y una franja lateral */
+.tabla-contenedor tr.fila-favorita td {
+    background: var(--color-principal-suave);
+}
+
+.tabla-contenedor tr.fila-favorita td:first-child {
+    box-shadow: inset 4px 0 0 var(--color-favorito);
+}
+
+.tabla-contenedor td .marca-favorito {
+    margin-left: 8px;
+    vertical-align: 1px;
+}
+
+/* Tu escudería dentro de una tabla: un punto de color antes del nombre */
+.tabla-contenedor td.escuderia-favorita::before {
+    content: "";
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: var(--color-favorito);
+    box-shadow: 0 0 0 1px rgba(21, 21, 30, 0.15);
+    vertical-align: 1px;
+}
+
+/* Saludo con tu perfil al final de la barra lateral (o del menú móvil) */
+.sidebar-perfil {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin: 0 20px 26px;
+    padding: 12px;
+
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-md);
+    background: var(--color-fondo);
+    color: var(--color-texto);
+
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.sidebar-perfil:hover {
+    border-color: var(--color-principal);
+    background: var(--color-principal-suave);
+}
+
+.sidebar-perfil-foto {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+    object-fit: cover;
+    background: var(--color-principal);
+    color: white;
+    box-shadow: 0 0 0 2px var(--color-superficie), 0 0 0 4px var(--color-favorito);
+
+    font-family: "Orbitron", sans-serif;
+    font-weight: 800;
+    font-size: 0.95rem;
+}
+
+.sidebar-perfil-texto {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.35;
+}
+
+.sidebar-perfil-saludo {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--color-titulo);
+    overflow-wrap: anywhere;
+}
+
+.sidebar-perfil-datos {
+    font-size: 0.76rem;
+    color: var(--color-texto-suave);
+    overflow-wrap: anywhere;
+}

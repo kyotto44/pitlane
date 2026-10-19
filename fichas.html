@@ -1,0 +1,200 @@
+<!doctype html>
+<!-- Página de fichas rápidas: piloto líder, monoplaza y banderas -->
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fichas rápidas | PitLane</title>
+    <meta name="description" content="Fichas rápidas de Fórmula 1: perfil de Kimi Antonelli, datos técnicos del monoplaza 2026 y el significado de las banderas de pista." />
+    <meta property="og:title" content="Fichas rápidas | PitLane" />
+    <meta property="og:description" content="Fichas rápidas de Fórmula 1: perfil de Kimi Antonelli, datos técnicos del monoplaza 2026 y el significado de las banderas de pista." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:site_name" content="PitLane" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,500;1,600&amp;family=Orbitron:wght@700;800;900&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/almacen.js"></script>
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/favoritos.js"></script>
+    <script defer src="js/modales.js"></script>
+  </head>
+
+  <body>
+    <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+
+    <header class="topbar">
+      <a href="index.html" class="logo">
+        <img src="imagenes/logo.webp" alt="" class="logo-icono" width="220" height="220">
+        <span>Pit<strong>Lane</strong></span>
+      </a>
+
+      <nav aria-label="Menú principal">
+        <ul class="menu-superior">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="pilotos.html">Pilotos</a></li>
+          <li><a href="clasificacion.html">Clasificación</a></li>
+          <li><a href="equipos.html">Escuderías</a></li>
+          <li><a href="multimedia.html">Multimedia</a></li>
+          <li><a href="resumen.html">Resumen del GP</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu-lateral">
+        <span class="menu-boton-icono" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>Menú</span>
+      </button>
+    </header>
+
+    <aside class="sidebar" id="menu-lateral">
+      <nav aria-label="Secciones de PitLane">
+        <div class="sidebar-grupo">
+          <p class="sidebar-titulo">PITLANE</p>
+          <a href="index.html"><span>01</span>Inicio</a>
+          <a href="pilotos.html"><span>02</span>Pilotos</a>
+          <a href="clasificacion.html"><span>03</span>Clasificación</a>
+          <a href="club.html"><span>04</span>Club de fans</a>
+          <a href="preferencias.html"><span>05</span>Preferencias</a>
+          <a href="equipos.html"><span>06</span>Escuderías</a>
+          <a href="circuitos.html"><span>07</span>Circuitos</a>
+          <a href="fichas.html" class="activo" aria-current="page"><span>08</span>Fichas rápidas</a>
+          <a href="multimedia.html"><span>09</span>Multimedia</a>
+          <a href="resumen.html"><span>10</span>Resumen del GP</a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content" id="contenido" tabindex="-1">
+      <section class="seccion">
+        <div class="contenedor">
+          <span class="etiqueta-superior">FICHAS RÁPIDAS</span>
+          <h1 class="titulo-pagina titulo-seccion con-subtitulo">Consulta rápida</h1>
+          <p class="intro-seccion suave">
+            Datos clave a un clic: perfil del piloto líder, specs del
+            monoplaza y el significado de cada bandera de pista.
+          </p>
+
+          <div class="grid-tres-columnas">
+            <article class="tarjeta">
+              <span class="badge">PILOTO</span>
+              <h2 class="h3">Ficha de piloto: Antonelli</h2>
+              <p>Biografía y palmarés del líder del campeonato.</p>
+              <a href="#modal-piloto" class="boton boton-principal">Ver ficha</a>
+            </article>
+
+            <article class="tarjeta">
+              <span class="badge">TÉCNICA</span>
+              <h2 class="h3">Ficha técnica del monoplaza</h2>
+              <p>Potencia, peso y velocidad máxima del reglamento actual.</p>
+              <a href="#modal-auto" class="boton boton-principal">Ver specs</a>
+            </article>
+
+            <article class="tarjeta">
+              <span class="badge">REGLAMENTO</span>
+              <h2 class="h3">Banderas de pista</h2>
+              <p>Qué significa cada bandera que ves en la transmisión.</p>
+              <a href="#modal-banderas" class="boton boton-principal">Ver reglas</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div id="modal-piloto" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-piloto-titulo">
+        <a href="#cerrar" class="modal-fondo" tabindex="-1" aria-hidden="true"></a>
+        <article class="modal-contenido">
+          <header class="modal-header">
+            <h3 id="modal-piloto-titulo">Kimi Antonelli</h3>
+            <a href="#cerrar" class="modal-cerrar" aria-label="Cerrar ventana">&times;</a>
+          </header>
+          <div class="modal-body">
+            <img src="imagenes/pilotos/antonelli.webp" alt="Kimi Antonelli" class="modal-foto" width="800" height="534" loading="lazy" decoding="async">
+            <p>Piloto italiano de Mercedes, líder del Campeonato de Pilotos
+            2026, buscando su primer título mundial en su segunda temporada
+            en la parrilla.</p>
+            <div class="tabla-contenedor">
+              <table>
+                <tbody>
+                  <tr><td>Nacionalidad</td><td>Italia</td></tr>
+                  <tr><td>Escudería</td><td>Mercedes</td></tr>
+                  <tr><td>Puntos 2026</td><td>242</td></tr>
+                  <tr><td>Victorias</td><td>6</td></tr>
+                  <tr><td>Poles</td><td>6</td></tr>
+                  <tr><td>Podios</td><td>10</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <footer class="modal-footer">
+            <a href="#cerrar" class="boton boton-secundario">Cerrar</a>
+          </footer>
+        </article>
+      </div>
+
+      <div id="modal-auto" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-auto-titulo">
+        <a href="#cerrar" class="modal-fondo" tabindex="-1" aria-hidden="true"></a>
+        <article class="modal-contenido">
+          <header class="modal-header">
+            <h3 id="modal-auto-titulo">Ficha técnica: monoplaza 2026</h3>
+            <a href="#cerrar" class="modal-cerrar" aria-label="Cerrar ventana">&times;</a>
+          </header>
+          <div class="modal-body">
+            <p>Los datos clave del monoplaza bajo el reglamento técnico
+            vigente de la Fórmula 1.</p>
+            <div class="tabla-contenedor">
+              <table>
+                <tbody>
+                  <tr><td>Potencia combinada</td><td>~1000 CV</td></tr>
+                  <tr><td>Peso mínimo</td><td>798 kg</td></tr>
+                  <tr><td>Velocidad máxima</td><td>~360 km/h</td></tr>
+                  <tr><td>0-100 km/h</td><td>&lt; 2.6 s</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <footer class="modal-footer">
+            <a href="#cerrar" class="boton boton-secundario">Cerrar</a>
+          </footer>
+        </article>
+      </div>
+
+      <div id="modal-banderas" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-banderas-titulo">
+        <a href="#cerrar" class="modal-fondo" tabindex="-1" aria-hidden="true"></a>
+        <article class="modal-contenido">
+          <header class="modal-header">
+            <h3 id="modal-banderas-titulo">Banderas de pista</h3>
+            <a href="#cerrar" class="modal-cerrar" aria-label="Cerrar ventana">&times;</a>
+          </header>
+          <div class="modal-body">
+            <div class="lista-banderas">
+              <div class="bandera-fila">
+                <span class="bandera-color bandera-amarilla" aria-hidden="true"></span>
+                <p><strong>Amarilla:</strong> peligro en pista, prohibido adelantar.</p>
+              </div>
+              <div class="bandera-fila">
+                <span class="bandera-color bandera-verde" aria-hidden="true"></span>
+                <p><strong>Verde:</strong> pista despejada, se reanuda el ritmo normal.</p>
+              </div>
+              <div class="bandera-fila">
+                <span class="bandera-color bandera-azul" aria-hidden="true"></span>
+                <p><strong>Azul:</strong> un coche más rápido se acerca, cede el paso.</p>
+              </div>
+              <div class="bandera-fila">
+                <span class="bandera-color bandera-roja" aria-hidden="true"></span>
+                <p><strong>Roja:</strong> sesión detenida por completo.</p>
+              </div>
+              <div class="bandera-fila">
+                <span class="bandera-color bandera-cuadros" aria-hidden="true"></span>
+                <p><strong>A cuadros:</strong> fin de la sesión o la carrera.</p>
+              </div>
+            </div>
+          </div>
+          <footer class="modal-footer">
+            <a href="#cerrar" class="boton boton-secundario">Cerrar</a>
+          </footer>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>

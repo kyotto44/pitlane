@@ -1,0 +1,214 @@
+<!doctype html>
+<!-- Página de preferencias del perfil de fan -->
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preferencias | PitLane</title>
+    <meta name="description" content="Configura tu perfil de fan en PitLane: piloto y escudería favoritos, alertas de carrera y datos de contacto, guardados en tu navegador." />
+    <meta property="og:title" content="Preferencias | PitLane" />
+    <meta property="og:description" content="Configura tu perfil de fan en PitLane: piloto y escudería favoritos, alertas de carrera y datos de contacto, guardados en tu navegador." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:site_name" content="PitLane" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,500;1,600&amp;family=Orbitron:wght@700;800;900&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/almacen.js"></script>
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/favoritos.js"></script>
+    <script defer src="js/validacion.js"></script>
+    <script defer src="js/preferencias.js"></script>
+  </head>
+
+  <body>
+    <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+
+    <header class="topbar">
+      <a href="index.html" class="logo">
+        <img src="imagenes/logo.webp" alt="" class="logo-icono" width="220" height="220">
+        <span>Pit<strong>Lane</strong></span>
+      </a>
+
+      <nav aria-label="Menú principal">
+        <ul class="menu-superior">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="pilotos.html">Pilotos</a></li>
+          <li><a href="clasificacion.html">Clasificación</a></li>
+          <li><a href="equipos.html">Escuderías</a></li>
+          <li><a href="multimedia.html">Multimedia</a></li>
+          <li><a href="resumen.html">Resumen del GP</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu-lateral">
+        <span class="menu-boton-icono" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>Menú</span>
+      </button>
+    </header>
+
+    <aside class="sidebar" id="menu-lateral">
+      <nav aria-label="Secciones de PitLane">
+        <div class="sidebar-grupo">
+          <p class="sidebar-titulo">PITLANE</p>
+          <a href="index.html"><span>01</span>Inicio</a>
+          <a href="pilotos.html"><span>02</span>Pilotos</a>
+          <a href="clasificacion.html"><span>03</span>Clasificación</a>
+          <a href="club.html"><span>04</span>Club de fans</a>
+          <a href="preferencias.html" class="activo" aria-current="page"><span>05</span>Preferencias</a>
+          <a href="equipos.html"><span>06</span>Escuderías</a>
+          <a href="circuitos.html"><span>07</span>Circuitos</a>
+          <a href="fichas.html"><span>08</span>Fichas rápidas</a>
+          <a href="multimedia.html"><span>09</span>Multimedia</a>
+          <a href="resumen.html"><span>10</span>Resumen del GP</a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content" id="contenido" tabindex="-1">
+      <section class="seccion">
+        <div class="contenedor">
+          <h1 class="titulo-pagina titulo-seccion">Preferencias de tu cuenta</h1>
+
+          <p class="intro-seccion">
+            Configura tu perfil de fan: escudería, alertas de carrera y cómo
+            quieres ver tus datos de suscripción.
+          </p>
+
+          <form id="form-preferencias">
+            <div class="catalogo-inputs">
+              <div class="input-card">
+                <label for="pref-piloto">Piloto favorito</label>
+                <select id="pref-piloto" name="piloto">
+                  <option value="">Sin preferencia</option>
+                  <option value="antonelli" data-escuderia="Mercedes">Kimi Antonelli</option>
+                  <option value="russell" data-escuderia="Mercedes">George Russell</option>
+                  <option value="hamilton" data-escuderia="Ferrari">Lewis Hamilton</option>
+                  <option value="norris" data-escuderia="McLaren">Lando Norris</option>
+                  <option value="leclerc" data-escuderia="Ferrari">Charles Leclerc</option>
+                  <option value="verstappen" data-escuderia="Red Bull Racing">Max Verstappen</option>
+                </select>
+              </div>
+
+              <div class="input-card">
+                <label for="pref-escuderia">Escudería favorita</label>
+                <select id="pref-escuderia" name="escuderia">
+                  <option value="">Sin preferencia</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="ferrari">Scuderia Ferrari</option>
+                  <option value="mclaren">McLaren</option>
+                  <option value="redbull">Red Bull Racing</option>
+                  <option value="williams">Williams</option>
+                  <option value="astonmartin">Aston Martin</option>
+                  <option value="racingbulls">Racing Bulls</option>
+                  <option value="alpine">Alpine</option>
+                  <option value="haas">Haas</option>
+                  <option value="audi">Audi (Sauber)</option>
+                  <option value="cadillac">Cadillac</option>
+                </select>
+              </div>
+
+              <div class="input-card">
+                <label for="pref-nombre">Nombre para mostrar</label>
+                <input type="text" id="pref-nombre" name="nombre" placeholder="Fernando Alonso" autocomplete="nickname" maxlength="40" />
+              </div>
+
+              <div class="input-card">
+                <label for="pref-correo">Correo de contacto</label>
+                <input type="email" id="pref-correo" name="correo" placeholder="piloto@escuderia.com" autocomplete="email" maxlength="120" />
+              </div>
+
+              <div class="input-card">
+                <label for="pref-contrasena">Contraseña</label>
+                <input type="password" id="pref-contrasena" name="contrasena" placeholder="••••••••" autocomplete="new-password" aria-describedby="pref-contrasena-nota" />
+                <p class="nota-campo" id="pref-contrasena-nota">Por seguridad, PitLane no guarda contraseñas en tu navegador.</p>
+              </div>
+
+              <div class="input-card">
+                <label for="pref-anio">Año en que empezaste a seguir la F1</label>
+                <input type="number" id="pref-anio" name="anio" min="1950" max="2026" step="1" value="2018" inputmode="numeric" />
+              </div>
+
+              <div class="input-card">
+                <label for="pref-fecha">Fecha del próximo GP que verás</label>
+                <input type="date" id="pref-fecha" name="fecha" />
+              </div>
+
+              <div class="input-card">
+                <div class="etiqueta-con-valor">
+                  <label for="pref-volumen">Volumen de notificaciones</label>
+                  <output class="valor-rango" id="pref-volumen-valor" for="pref-volumen">70 %</output>
+                </div>
+                <input type="range" id="pref-volumen" name="volumen" min="0" max="100" value="70" />
+              </div>
+
+              <div class="input-card">
+                <div class="etiqueta-con-valor">
+                  <label for="pref-color">Color de acento del panel</label>
+                  <output class="valor-rango" id="pref-color-valor" for="pref-color">#E10600</output>
+                </div>
+                <input type="color" id="pref-color" name="color" value="#e10600" aria-describedby="pref-color-nota" />
+                <p class="nota-campo" id="pref-color-nota">Es el color con el que se resaltan tus favoritos.</p>
+              </div>
+
+              <div class="input-card">
+                <label for="pref-foto">Foto de perfil</label>
+                <input type="file" id="pref-foto" name="foto" accept="image/jpeg, image/png, image/webp" aria-describedby="pref-foto-nota" />
+                <p class="nota-campo" id="pref-foto-nota">JPG, PNG o WebP de máximo 5 MB.</p>
+                <div class="foto-vista" id="pref-foto-vista" hidden>
+                  <img id="pref-foto-imagen" alt="Vista previa de tu foto de perfil" width="64" height="64">
+                  <button type="button" class="boton-texto" id="pref-foto-quitar">Quitar foto</button>
+                </div>
+              </div>
+
+              <div class="input-card">
+                <label for="pref-telefono">Teléfono de contacto</label>
+                <input type="tel" id="pref-telefono" name="telefono" placeholder="+57 300 000 0000" autocomplete="tel" maxlength="20" />
+              </div>
+
+              <div class="input-card">
+                <label for="pref-buscar">Buscar piloto o escudería</label>
+                <input type="search" id="pref-buscar" name="buscar" placeholder="Antonelli, Ferrari..." autocomplete="off" aria-describedby="pref-buscar-estado" aria-controls="pref-buscar-resultados" />
+                <p class="busqueda-estado" id="pref-buscar-estado" aria-live="polite"></p>
+                <ul class="resultados-busqueda" id="pref-buscar-resultados" aria-label="Resultados de la búsqueda"></ul>
+              </div>
+
+              <div class="input-card" role="group" aria-labelledby="pref-categoria-titulo">
+                <span class="etiqueta-grupo" id="pref-categoria-titulo">Categoría que sigues</span>
+                <div class="opcion">
+                  <input type="radio" name="categoria" id="f1" value="f1" checked />
+                  <label for="f1">Fórmula 1</label>
+                </div>
+                <div class="opcion">
+                  <input type="radio" name="categoria" id="f2" value="f2" />
+                  <label for="f2">Fórmula 2</label>
+                </div>
+              </div>
+
+              <div class="input-card" role="group" aria-labelledby="pref-avisos-titulo">
+                <span class="etiqueta-grupo" id="pref-avisos-titulo">Notificaciones activas</span>
+                <div class="opcion">
+                  <input type="checkbox" id="noti-carrera" name="avisoCarrera" checked />
+                  <label for="noti-carrera">Aviso antes de la carrera</label>
+                </div>
+                <div class="opcion">
+                  <input type="checkbox" id="noti-clasi" name="avisoClasificacion" />
+                  <label for="noti-clasi">Aviso de clasificación</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="acciones-preferencias">
+              <button type="submit" class="boton-formulario">Guardar preferencias</button>
+              <button type="button" class="boton boton-secundario" id="pref-restablecer">Borrar preferencias</button>
+            </div>
+
+            <div class="estado-formulario" id="pref-estado" role="status"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

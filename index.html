@@ -1,0 +1,167 @@
+<!doctype html>
+<!-- Página de inicio principal del sitio PitLane -->
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio | PitLane</title>
+    <meta name="description" content="Portal de Fórmula 1 de la temporada 2026: pilotos, escuderías, clasificación, circuitos, multimedia y el resumen del último Gran Premio." />
+    <meta property="og:title" content="Inicio | PitLane" />
+    <meta property="og:description" content="Portal de Fórmula 1 de la temporada 2026: pilotos, escuderías, clasificación, circuitos, multimedia y el resumen del último Gran Premio." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:site_name" content="PitLane" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,500;1,600&amp;family=Orbitron:wght@700;800;900&amp;display=swap" rel="stylesheet" />
+    <link rel="preload" as="image" href="imagenes/fondo_hero.webp" type="image/webp" fetchpriority="high" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/almacen.js"></script>
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/favoritos.js"></script>
+  </head>
+
+  <body>
+    <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+
+    <header class="topbar">
+      <a href="index.html" class="logo">
+        <img src="imagenes/logo.webp" alt="" class="logo-icono" width="220" height="220">
+        <span>Pit<strong>Lane</strong></span>
+      </a>
+
+      <nav aria-label="Menú principal">
+        <ul class="menu-superior">
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="pilotos.html">Pilotos</a></li>
+          <li><a href="clasificacion.html">Clasificación</a></li>
+          <li><a href="equipos.html">Escuderías</a></li>
+          <li><a href="multimedia.html">Multimedia</a></li>
+          <li><a href="resumen.html">Resumen del GP</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu-lateral">
+        <span class="menu-boton-icono" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>Menú</span>
+      </button>
+    </header>
+
+    <aside class="sidebar" id="menu-lateral">
+      <nav aria-label="Secciones de PitLane">
+        <div class="sidebar-grupo">
+          <p class="sidebar-titulo">PITLANE</p>
+          <a href="index.html" class="activo" aria-current="page"><span>01</span>Inicio</a>
+          <a href="pilotos.html"><span>02</span>Pilotos</a>
+          <a href="clasificacion.html"><span>03</span>Clasificación</a>
+          <a href="club.html"><span>04</span>Club de fans</a>
+          <a href="preferencias.html"><span>05</span>Preferencias</a>
+          <a href="equipos.html"><span>06</span>Escuderías</a>
+          <a href="circuitos.html"><span>07</span>Circuitos</a>
+          <a href="fichas.html"><span>08</span>Fichas rápidas</a>
+          <a href="multimedia.html"><span>09</span>Multimedia</a>
+          <a href="resumen.html"><span>10</span>Resumen del GP</a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content" id="contenido" tabindex="-1">
+      <section class="hero">
+        <div class="contenedor hero-grid">
+          <div class="hero-contenido">
+            <span class="etiqueta-superior">TEMPORADA 2026</span>
+
+            <h1>Todo el mundo de la Fórmula 1, en un solo lugar.</h1>
+
+            <p>
+              Pilotos, escuderías, clasificación en vivo, calendario de
+              carreras y todo lo que necesitas para seguir la temporada de
+              principio a fin.
+            </p>
+
+            <div class="acciones-hero">
+              <a href="clasificacion.html" class="boton boton-principal">
+                Ver clasificación
+              </a>
+              <a href="club.html" class="boton boton-secundario">
+                Únete al club
+              </a>
+            </div>
+          </div>
+
+          <article class="codigo" aria-labelledby="titulo-proxima-carrera">
+            <header id="titulo-proxima-carrera">PRÓXIMA CARRERA</header>
+            <pre><code>Gran Premio de Italia
+Autodromo Nazionale Monza
+
+Fecha: 6 de septiembre, 2026
+Ronda 13 de 23
+
+Líder de pilotos:
+Kimi Antonelli — 242 pts
+
+Líder de constructores:
+Mercedes — 425 pts</code></pre>
+          </article>
+        </div>
+      </section>
+
+      <section class="seccion">
+        <div class="contenedor">
+          <h2 class="titulo-seccion">Explora PitLane</h2>
+
+          <div class="grid-tres-columnas">
+            <a href="pilotos.html" class="tarjeta tarjeta-imagen explora-tarjeta">
+              <img src="imagenes/explora/pilotos.webp" alt="" class="tarjeta-fondo" width="738" height="414" loading="lazy" decoding="async">
+              <div class="explora-texto">
+                <h3>Pilotos</h3>
+                <p>Conoce a los protagonistas de la parrilla y su trayectoria.</p>
+              </div>
+            </a>
+
+            <a href="clasificacion.html" class="tarjeta tarjeta-imagen explora-tarjeta">
+              <img src="imagenes/explora/clasificacion.webp" alt="" class="tarjeta-fondo" width="739" height="415" loading="lazy" decoding="async">
+              <div class="explora-texto">
+                <h3>Clasificación</h3>
+                <p>El campeonato de pilotos y constructores, actualizado.</p>
+              </div>
+            </a>
+
+            <a href="equipos.html" class="tarjeta tarjeta-imagen explora-tarjeta">
+              <img src="imagenes/explora/escuderias.webp" alt="" class="tarjeta-fondo" width="782" height="440" loading="lazy" decoding="async">
+              <div class="explora-texto">
+                <h3>Escuderías</h3>
+                <p>Las once escuderías del campeonato, equipo por equipo.</p>
+              </div>
+            </a>
+
+            <a href="circuitos.html" class="tarjeta tarjeta-imagen explora-tarjeta">
+              <img src="imagenes/explora/circuitos.webp" alt="" class="tarjeta-fondo" width="760" height="496" loading="lazy" decoding="async">
+              <div class="explora-texto">
+                <h3>Circuitos</h3>
+                <p>Los trazados más icónicos del calendario mundial.</p>
+              </div>
+            </a>
+
+            <a href="multimedia.html" class="tarjeta tarjeta-imagen explora-tarjeta">
+              <img src="imagenes/explora/multimedia.webp" alt="" class="tarjeta-fondo" width="638" height="480" loading="lazy" decoding="async">
+              <div class="explora-texto">
+                <h3>Multimedia</h3>
+                <p>Highlights de carrera y ubicación de cada circuito.</p>
+              </div>
+            </a>
+
+            <a href="club.html" class="tarjeta tarjeta-imagen explora-tarjeta">
+              <img src="imagenes/explora/club.webp" alt="" class="tarjeta-fondo" width="447" height="447" loading="lazy" decoding="async">
+              <div class="explora-texto">
+                <h3>Club de fans</h3>
+                <p>Regístrate y recibe novedades antes que nadie.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

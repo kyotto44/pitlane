@@ -1,0 +1,125 @@
+/* Modal - Ventana emergente */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 30px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity var(--transicion);
+    z-index: var(--capa-modal);
+}
+
+/* Modal activo */
+.modal:target {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Fondo oscuro del modal */
+.modal-fondo {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.72);
+    backdrop-filter: blur(5px);
+}
+
+/* Contenido del modal */
+.modal-contenido {
+    position: relative;
+    width: min(100%, 650px);
+    max-height: 85vh;
+    overflow-y: auto;
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-lg);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+    transform: translateY(30px) scale(0.96);
+    transition: transform var(--transicion);
+    z-index: 1;
+}
+
+.modal:target .modal-contenido {
+    transform: translateY(0) scale(1);
+}
+
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 24px;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.modal-cerrar {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--color-principal-suave);
+    color: var(--color-principal);
+    font-size: 1.6rem;
+    line-height: 1;
+    /* Sin "all": así el botón es visible (y enfocable) en cuanto se abre la ventana */
+    transition: background-color var(--transicion), color var(--transicion), transform var(--transicion);
+}
+
+@media (pointer: coarse) {
+    .modal-cerrar {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* Con una ventana abierta la página de fondo no se desplaza (js/modales.js) */
+html.modal-abierto {
+    overflow: hidden;
+}
+
+.modal-cerrar:hover {
+    background: var(--color-principal);
+    color: white;
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    padding: 26px;
+}
+
+.modal-body p {
+    color: var(--color-texto-suave);
+}
+
+.modal-body .tabla-contenedor {
+    margin-top: 18px;
+}
+
+.modal-foto {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: var(--radio-md);
+    margin-bottom: 18px;
+}
+
+.modal-circuito-cabecera {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 18px 24px;
+    border-top: 1px solid var(--color-borde);
+    background: var(--color-fondo);
+}

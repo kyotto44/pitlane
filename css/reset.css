@@ -1,0 +1,36 @@
+/* Reset CSS - Normaliza estilos por defecto */
+
+/* Elimina márgenes y rellenos */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Enlaces sin decoración */
+a{ 
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Listas sin viñetas */
+ul{
+    list-style: none;
+}
+
+/* Imágenes responsivas */
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Formularios heredan fuentes */
+button,input,select,textarea{
+    font: inherit;
+    color: inherit;
+    border: none;
+    outline: none;
+    background: none;
+}
+

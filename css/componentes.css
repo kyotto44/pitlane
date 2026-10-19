@@ -1,0 +1,341 @@
+/* Botones */
+.boton {
+    display: inline-block;
+    padding: 13px 24px;
+    border-radius: var(--radio-sm);
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: background-color var(--transicion), color var(--transicion), border-color var(--transicion), transform 0.16s var(--ease-out);
+}
+
+/* Botón principal rojo */
+.boton-principal {
+    background: var(--color-principal);
+    color: white;
+}
+
+.boton-principal:hover {
+    background: var(--color-principal-oscuro);
+}
+
+/* Botón secundario blanco */
+.boton-secundario {
+    background: var(--color-superficie);
+    color: var(--color-texto);
+    border: 1px solid var(--color-borde);
+}
+
+.boton-secundario:hover {
+    border-color: var(--color-principal);
+    color: var(--color-principal);
+}
+
+/* Badge/etiqueta */
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    margin-bottom: 14px;
+
+    border-radius: 6px;
+
+    background: var(--color-principal-suave);
+    color: var(--color-principal-oscuro);
+
+    font-family: "Courier New", monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+/* Tarjeta base */
+.tarjeta {
+    padding: 26px;
+
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-md);
+
+    transition: var(--transicion);
+}
+
+.tarjeta-imagen {
+    position: relative;
+    overflow: hidden;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.tarjeta-imagen .tarjeta-fondo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.tarjeta-imagen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.8));
+    z-index: 1;
+}
+
+.tarjeta-imagen h3,
+.tarjeta-imagen .h3,
+.tarjeta-imagen p {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.tarjeta-imagen p {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.explora-tarjeta,
+.piloto-tarjeta {
+    align-items: flex-end;
+}
+
+/* El recuadro va al pie y la foto se encuadra arriba para que no tape la cara */
+.piloto-tarjeta {
+    justify-content: flex-end;
+    min-height: 340px;
+}
+
+.piloto-tarjeta .tarjeta-fondo {
+    object-position: center 20%;
+}
+
+.explora-tarjeta.tarjeta-imagen::before,
+.piloto-tarjeta.tarjeta-imagen::before {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.35) 100%);
+}
+
+.explora-texto,
+.piloto-texto {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 12px 12px;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: var(--radio-sm);
+}
+
+.explora-texto h3,
+.explora-texto p,
+.piloto-texto h3,
+.piloto-texto .h3,
+.piloto-texto p {
+    color: #14171c;
+}
+
+.explora-texto p,
+.piloto-texto p {
+    color: #40454d;
+}
+
+.tarjeta:hover {
+    box-shadow: var(--sombra-suave);
+    transform: translateY(-3px);
+}
+
+.tarjeta h3,
+.tarjeta .h3 {
+    margin-bottom: 8px;
+}
+
+.tarjeta p {
+    color: var(--color-texto-suave);
+    font-size: 0.92rem;
+}
+
+.caja-info {
+    padding: 26px;
+    background: var(--color-principal-suave);
+    border-radius: var(--radio-md);
+}
+
+.caja-info h3,
+.caja-info .h3 {
+    margin-bottom: 10px;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-md);
+}
+
+.tabla-contenedor table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-contenedor th,
+.tabla-contenedor td {
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.tabla-contenedor thead {
+    background: var(--color-secundario);
+    color: white;
+}
+
+.tabla-contenedor tfoot {
+    font-weight: 700;
+    background: var(--color-principal-suave);
+}
+
+/* Lista de banderas de pista */
+.lista-banderas {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.bandera-fila {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.bandera-fila p {
+    margin: 0;
+    color: var(--color-texto-suave);
+}
+
+.bandera-fila strong {
+    color: var(--color-texto);
+}
+
+.bandera-color {
+    flex-shrink: 0;
+    width: 36px;
+    height: 24px;
+    margin-top: 3px;
+    border-radius: 4px;
+    border: 1px solid var(--color-borde);
+}
+
+.bandera-amarilla { background: #f4c300; }
+.bandera-verde { background: #1c9c4a; }
+.bandera-azul { background: #1d6fd6; }
+.bandera-roja { background: var(--color-principal); }
+
+.bandera-cuadros {
+    background-image:
+        linear-gradient(45deg, #15151e 25%, transparent 25%, transparent 75%, #15151e 75%),
+        linear-gradient(45deg, #15151e 25%, white 25%, white 75%, #15151e 75%);
+    background-size: 10px 10px;
+    background-position: 0 0, 5px 5px;
+}
+/* Tarjetas de "Explora PitLane": ahora son enlaces a cada sección */
+a.explora-tarjeta {
+    color: inherit;
+}
+
+a.explora-tarjeta:hover .explora-texto h3 {
+    color: var(--color-principal);
+}
+
+.explora-texto h3 {
+    transition: color var(--transicion);
+}
+
+/* Tabla ordenable (Clasificación): encabezados como botones, lo agrega js/tabla-ordenable.js */
+.tabla-ordenable th.ordenable {
+    padding: 0;
+}
+
+.orden-boton {
+    width: 100%;
+    min-height: 48px;
+    padding: 14px 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: inherit;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+.orden-boton:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.orden-boton:focus-visible {
+    outline-offset: -4px;
+}
+
+/* Flechas: las dos tenues si la columna no está ordenada, una sola marcada si lo está */
+.orden-icono {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.orden-icono::before,
+.orden-icono::after {
+    content: "";
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    opacity: 0.4;
+}
+
+.orden-icono::before {
+    border-bottom: 5px solid currentColor;
+}
+
+.orden-icono::after {
+    border-top: 5px solid currentColor;
+}
+
+th[aria-sort="ascending"] .orden-icono::before,
+th[aria-sort="descending"] .orden-icono::after {
+    opacity: 1;
+}
+
+th[aria-sort="ascending"] .orden-icono::after,
+th[aria-sort="descending"] .orden-icono::before {
+    opacity: 0.15;
+}
+
+th[aria-sort] .orden-boton {
+    color: #ffd9d6;
+}
+
+.tabla-ordenable td {
+    font-variant-numeric: tabular-nums;
+}
+
+/* Las filas reordenadas entran con un leve desvanecido */
+.tabla-ordenable tbody.recien-ordenado tr {
+    animation: fila-aparece 0.24s var(--ease-out);
+}
+
+@keyframes fila-aparece {
+    from {
+        opacity: 0.35;
+    }
+}
+
+/* Carrusel con foco de teclado (se puede desplazar con las flechas) */
+.carrusel:focus-visible {
+    outline-offset: 2px;
+    border-radius: var(--radio-lg);
+}

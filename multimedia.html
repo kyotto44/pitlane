@@ -1,0 +1,134 @@
+<!doctype html>
+<!-- Página con videos e información multimedia de F1 -->
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multimedia | PitLane</title>
+    <meta name="description" content="Highlights del GP de Países Bajos, mapa del Autodromo Nazionale Monza y galería de la temporada 2026 de Fórmula 1." />
+    <meta property="og:title" content="Multimedia | PitLane" />
+    <meta property="og:description" content="Highlights del GP de Países Bajos, mapa del Autodromo Nazionale Monza y galería de la temporada 2026 de Fórmula 1." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:site_name" content="PitLane" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,500;1,600&amp;family=Orbitron:wght@700;800;900&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/almacen.js"></script>
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/favoritos.js"></script>
+  </head>
+
+  <body>
+    <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+
+    <header class="topbar">
+      <a href="index.html" class="logo">
+        <img src="imagenes/logo.webp" alt="" class="logo-icono" width="220" height="220">
+        <span>Pit<strong>Lane</strong></span>
+      </a>
+
+      <nav aria-label="Menú principal">
+        <ul class="menu-superior">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="pilotos.html">Pilotos</a></li>
+          <li><a href="clasificacion.html">Clasificación</a></li>
+          <li><a href="equipos.html">Escuderías</a></li>
+          <li><a href="multimedia.html" aria-current="page">Multimedia</a></li>
+          <li><a href="resumen.html">Resumen del GP</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu-lateral">
+        <span class="menu-boton-icono" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>Menú</span>
+      </button>
+    </header>
+
+    <aside class="sidebar" id="menu-lateral">
+      <nav aria-label="Secciones de PitLane">
+        <div class="sidebar-grupo">
+          <p class="sidebar-titulo">PITLANE</p>
+          <a href="index.html"><span>01</span>Inicio</a>
+          <a href="pilotos.html"><span>02</span>Pilotos</a>
+          <a href="clasificacion.html"><span>03</span>Clasificación</a>
+          <a href="club.html"><span>04</span>Club de fans</a>
+          <a href="preferencias.html"><span>05</span>Preferencias</a>
+          <a href="equipos.html"><span>06</span>Escuderías</a>
+          <a href="circuitos.html"><span>07</span>Circuitos</a>
+          <a href="fichas.html"><span>08</span>Fichas rápidas</a>
+          <a href="multimedia.html" class="activo" aria-current="page"><span>09</span>Multimedia</a>
+          <a href="resumen.html"><span>10</span>Resumen del GP</a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content" id="contenido" tabindex="-1">
+      <section class="seccion">
+        <div class="contenedor">
+          <span class="etiqueta-superior">MULTIMEDIA</span>
+          <h1 class="titulo-pagina titulo-seccion con-subtitulo">Rumbo al GP de Italia</h1>
+          <p class="intro-seccion suave">
+            Repasa los mejores momentos de la última carrera y ubica el
+            trazado de Monza antes del fin de semana de carrera.
+          </p>
+
+          <div class="multimedia-grid">
+            <article class="embed-card">
+              <div class="embed-card-header">
+                <span class="badge">VIDEO</span>
+                <h2 class="h3">Highlights de la última carrera</h2>
+              </div>
+              <div class="embed-frame">
+                <iframe src="https://www.youtube.com/embed/3OMLs3yI-KE?si=WcxIWTa-vvimYMwY" title="Video: highlights del GP de Países Bajos" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <p class="embed-caption">Los mejores adelantamientos y el podio completo del GP de Países Bajos en Zandvoort.</p>
+            </article>
+
+            <article class="embed-card">
+              <div class="embed-card-header">
+                <span class="badge">MAPA</span>
+                <h2 class="h3">Autodromo Nazionale Monza</h2>
+              </div>
+              <div class="embed-frame">
+                <iframe
+                  src="https://www.google.com/maps?q=Autodromo+Nazionale+Monza,Italia&amp;output=embed"
+                  title="Mapa del circuito de Monza"
+                  loading="lazy"
+                ></iframe>
+              </div>
+              <p class="embed-caption">5.793 km de rectas históricas en el corazón del Parco di Monza, Italia.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion">
+        <div class="contenedor">
+          <h2 class="titulo-seccion">Galería de la temporada</h2>
+
+          <div class="galeria-multimedia">
+            <div class="galeria-item">
+              <img src="imagenes/pilotos/antonelli.webp" alt="Kimi Antonelli" width="800" height="534" loading="lazy" decoding="async">
+              <span>Antonelli · Líder</span>
+            </div>
+            <div class="galeria-item">
+              <img src="imagenes/pilotos/norris.webp" alt="Lando Norris" width="800" height="535" loading="lazy" decoding="async">
+              <span>Norris · Zandvoort</span>
+            </div>
+            <div class="galeria-item">
+              <img src="imagenes/pilotos/leclerc.webp" alt="Charles Leclerc" width="547" height="365" loading="lazy" decoding="async">
+              <span>Leclerc · Ferrari</span>
+            </div>
+            <div class="galeria-item">
+              <img src="imagenes/circuitos/monza.webp" alt="Circuito de Monza" width="459" height="459" loading="lazy" decoding="async">
+              <span>Monza · Próxima parada</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

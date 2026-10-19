@@ -1,0 +1,68 @@
+/* Estilos base y tipografía */
+
+body {
+    font-family: "Fraunces", Georgia, serif;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.65;
+}
+
+/* Encabezados */
+h1, h2, h3, h4 {
+    font-family: "Orbitron", sans-serif;
+    line-height: 1.5;
+    color: var(--color-titulo);
+}
+
+h1 {
+    font-size: clamp(2.8rem, 6vw, 5rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+/* .h3: títulos que en el HTML son <h2> (para respetar el orden de encabezados) pero se ven como h3 */
+h3,
+.h3 {
+    font-size: 1.2rem;
+}
+
+/* Espaciado entre párrafos */
+p + p {
+    margin-top: 1rem;
+}
+
+/* Selección de texto */
+::selection {
+    background: var(--color-principal);
+    color: white;
+}
+
+/* Los enlaces internos (#contenido, #grid...) no quedan tapados por el header fijo */
+html {
+    scroll-padding-top: var(--alto-header);
+}
+
+/* Título principal de cada página: es <h1> pero conserva el tamaño de los títulos de sección */
+h1.titulo-pagina {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+/* Espaciados que antes estaban como estilos en línea (style="margin-bottom: 30px") */
+.titulo-seccion {
+    margin-bottom: 30px;
+}
+
+.titulo-seccion.con-subtitulo {
+    margin-bottom: 10px;
+}
+
+.intro-seccion {
+    margin-bottom: 30px;
+}
+
+.intro-seccion.suave {
+    max-width: 60ch;
+    color: var(--color-texto-suave);
+}

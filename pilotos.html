@@ -1,0 +1,159 @@
+<!doctype html>
+<!-- Página de listado de pilotos de la Fórmula 1 -->
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pilotos | PitLane</title>
+    <meta name="description" content="Pilotos de la parrilla 2026 de Fórmula 1: Antonelli, Russell, Hamilton, Norris, Leclerc y Verstappen, con la ficha del líder del campeonato." />
+    <meta property="og:title" content="Pilotos | PitLane" />
+    <meta property="og:description" content="Pilotos de la parrilla 2026 de Fórmula 1: Antonelli, Russell, Hamilton, Norris, Leclerc y Verstappen, con la ficha del líder del campeonato." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:site_name" content="PitLane" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,500;1,600&amp;family=Orbitron:wght@700;800;900&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/almacen.js"></script>
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/favoritos.js"></script>
+  </head>
+
+  <body>
+    <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+
+    <header class="topbar">
+      <a href="index.html" class="logo">
+        <img src="imagenes/logo.webp" alt="" class="logo-icono" width="220" height="220">
+        <span>Pit<strong>Lane</strong></span>
+      </a>
+
+      <nav aria-label="Menú principal">
+        <ul class="menu-superior">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="pilotos.html" aria-current="page">Pilotos</a></li>
+          <li><a href="clasificacion.html">Clasificación</a></li>
+          <li><a href="equipos.html">Escuderías</a></li>
+          <li><a href="multimedia.html">Multimedia</a></li>
+          <li><a href="resumen.html">Resumen del GP</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu-lateral">
+        <span class="menu-boton-icono" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>Menú</span>
+      </button>
+    </header>
+
+    <aside class="sidebar" id="menu-lateral">
+      <nav aria-label="Secciones de PitLane">
+        <div class="sidebar-grupo">
+          <p class="sidebar-titulo">PITLANE</p>
+          <a href="index.html"><span>01</span>Inicio</a>
+          <a href="pilotos.html" class="activo" aria-current="page"><span>02</span>Pilotos</a>
+          <a href="clasificacion.html"><span>03</span>Clasificación</a>
+          <a href="club.html"><span>04</span>Club de fans</a>
+          <a href="preferencias.html"><span>05</span>Preferencias</a>
+          <a href="equipos.html"><span>06</span>Escuderías</a>
+          <a href="circuitos.html"><span>07</span>Circuitos</a>
+          <a href="fichas.html"><span>08</span>Fichas rápidas</a>
+          <a href="multimedia.html"><span>09</span>Multimedia</a>
+          <a href="resumen.html"><span>10</span>Resumen del GP</a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content" id="contenido" tabindex="-1">
+      <section class="seccion">
+        <div class="contenedor">
+          <h1 class="titulo-pagina titulo-seccion">Pilotos de la parrilla</h1>
+
+          <div class="grid-tres-columnas">
+            <article class="tarjeta tarjeta-imagen piloto-tarjeta" data-piloto="antonelli">
+              <img src="imagenes/pilotos/antonelli.webp" alt="Kimi Antonelli" class="tarjeta-fondo" width="800" height="534" decoding="async">
+              <div class="piloto-texto">
+                <h2 class="h3">Kimi Antonelli</h2>
+                <p>#12 · Mercedes — Italiano, líder del campeonato en su segunda temporada.</p>
+              </div>
+            </article>
+
+            <article class="tarjeta tarjeta-imagen piloto-tarjeta" data-piloto="russell">
+              <img src="imagenes/pilotos/russell.webp" alt="George Russell" class="tarjeta-fondo" width="800" height="533" decoding="async">
+              <div class="piloto-texto">
+                <h2 class="h3">George Russell</h2>
+                <p>#63 · Mercedes — Británico, segundo en el campeonato.</p>
+              </div>
+            </article>
+
+            <article class="tarjeta tarjeta-imagen piloto-tarjeta" data-piloto="hamilton">
+              <img src="imagenes/pilotos/hamilton.webp" alt="Lewis Hamilton" class="tarjeta-fondo" width="800" height="533" decoding="async">
+              <div class="piloto-texto">
+                <h2 class="h3">Lewis Hamilton</h2>
+                <p>#44 · Ferrari — Británico, siete veces campeón del mundo.</p>
+              </div>
+            </article>
+
+            <article class="tarjeta tarjeta-imagen piloto-tarjeta" data-piloto="norris">
+              <img src="imagenes/pilotos/norris.webp" alt="Lando Norris" class="tarjeta-fondo" width="800" height="535" loading="lazy" decoding="async">
+              <div class="piloto-texto">
+                <h2 class="h3">Lando Norris</h2>
+                <p>#4 · McLaren — Británico, ganador del último GP en Zandvoort.</p>
+              </div>
+            </article>
+
+            <article class="tarjeta tarjeta-imagen piloto-tarjeta" data-piloto="leclerc">
+              <img src="imagenes/pilotos/leclerc.webp" alt="Charles Leclerc" class="tarjeta-fondo" width="547" height="365" loading="lazy" decoding="async">
+              <div class="piloto-texto">
+                <h2 class="h3">Charles Leclerc</h2>
+                <p>#16 · Ferrari — Monegasco, quinto en el campeonato.</p>
+              </div>
+            </article>
+
+            <article class="tarjeta tarjeta-imagen piloto-tarjeta" data-piloto="verstappen">
+              <img src="imagenes/pilotos/verstappen.webp" alt="Max Verstappen" class="tarjeta-fondo" width="800" height="533" loading="lazy" decoding="async">
+              <div class="piloto-texto">
+                <h2 class="h3">Max Verstappen</h2>
+                <p>#1 · Red Bull Racing — Neerlandés, tricampeón, sexto esta temporada.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion">
+        <div class="contenedor">
+          <h2 class="titulo-seccion">Ficha destacada</h2>
+
+          <div class="grid-dos-columnas">
+            <article class="codigo" aria-labelledby="titulo-ficha-antonelli">
+              <header id="titulo-ficha-antonelli">KIMI ANTONELLI · #12</header>
+              <pre><code>Nacionalidad:   Italia
+Escudería:      Mercedes
+Puntos 2026:    242
+Victorias:      6
+Poles:          6
+Podios:         10</code></pre>
+            </article>
+
+            <div class="caja-info">
+              <h3>Biografía</h3>
+              <p>
+                Kimi Antonelli debutó en la Fórmula 1 en 2025 de la mano de
+                Mercedes tras arrasar en las categorías junior, y en su
+                segunda temporada ya lidera el Campeonato de Pilotos con
+                seis victorias y seis poles, en busca de su primer título
+                mundial.
+              </p>
+              <p>
+                Próxima carrera: Gran Premio de Italia, Autodromo Nazionale
+                Monza.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

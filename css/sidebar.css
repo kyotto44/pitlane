@@ -1,0 +1,57 @@
+/* Grupo de sidebar */
+.sidebar-grupo {
+    padding: 26px 20px;
+}
+
+/* Título de grupo */
+.sidebar-titulo {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--color-texto-suave);
+
+    margin-bottom: 14px;
+}
+
+/* Enlaces del sidebar */
+.sidebar-grupo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 12px;
+    margin-bottom: 2px;
+
+    border-radius: 8px;
+
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--color-texto);
+
+    /* Propiedades explícitas: con "all" también se animaba la visibilidad heredada
+       y los enlaces tardaban en poder recibir el foco al abrir el menú móvil */
+    transition: background-color var(--transicion), color var(--transicion);
+}
+
+/* Etiqueta dentro del enlace */
+.sidebar-grupo a span {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--color-texto-suave);
+}
+
+/* Hover de enlace */
+.sidebar-grupo a:hover {
+    background: var(--color-principal-suave);
+    color: var(--color-principal);
+}
+
+/* Enlace activo */
+.sidebar-grupo a.activo {
+    background: var(--color-principal);
+    color: white;
+}
+
+.sidebar-grupo a.activo span {
+    color: white;
+}

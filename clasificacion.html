@@ -1,0 +1,171 @@
+<!doctype html>
+<!-- Página de clasificación actual del campeonato de pilotos -->
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clasificación | PitLane</title>
+    <meta name="description" content="Campeonato de pilotos de Fórmula 1 2026 tras 12 de 23 carreras y horario del fin de semana del GP de Italia en Monza." />
+    <meta property="og:title" content="Clasificación | PitLane" />
+    <meta property="og:description" content="Campeonato de pilotos de Fórmula 1 2026 tras 12 de 23 carreras y horario del fin de semana del GP de Italia en Monza." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:site_name" content="PitLane" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,500;1,600&amp;family=Orbitron:wght@700;800;900&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/almacen.js"></script>
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/favoritos.js"></script>
+    <script defer src="js/tabla-ordenable.js"></script>
+  </head>
+
+  <body>
+    <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+
+    <header class="topbar">
+      <a href="index.html" class="logo">
+        <img src="imagenes/logo.webp" alt="" class="logo-icono" width="220" height="220">
+        <span>Pit<strong>Lane</strong></span>
+      </a>
+
+      <nav aria-label="Menú principal">
+        <ul class="menu-superior">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="pilotos.html">Pilotos</a></li>
+          <li><a href="clasificacion.html" aria-current="page">Clasificación</a></li>
+          <li><a href="equipos.html">Escuderías</a></li>
+          <li><a href="multimedia.html">Multimedia</a></li>
+          <li><a href="resumen.html">Resumen del GP</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu-lateral">
+        <span class="menu-boton-icono" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>Menú</span>
+      </button>
+    </header>
+
+    <aside class="sidebar" id="menu-lateral">
+      <nav aria-label="Secciones de PitLane">
+        <div class="sidebar-grupo">
+          <p class="sidebar-titulo">PITLANE</p>
+          <a href="index.html"><span>01</span>Inicio</a>
+          <a href="pilotos.html"><span>02</span>Pilotos</a>
+          <a href="clasificacion.html" class="activo" aria-current="page"><span>03</span>Clasificación</a>
+          <a href="club.html"><span>04</span>Club de fans</a>
+          <a href="preferencias.html"><span>05</span>Preferencias</a>
+          <a href="equipos.html"><span>06</span>Escuderías</a>
+          <a href="circuitos.html"><span>07</span>Circuitos</a>
+          <a href="fichas.html"><span>08</span>Fichas rápidas</a>
+          <a href="multimedia.html"><span>09</span>Multimedia</a>
+          <a href="resumen.html"><span>10</span>Resumen del GP</a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content" id="contenido" tabindex="-1">
+      <section class="seccion">
+        <div class="contenedor">
+          <h1 class="titulo-pagina titulo-seccion">Campeonato de pilotos</h1>
+
+          <div class="tabla-contenedor">
+            <table class="tabla-ordenable" data-ordenable>
+              <caption class="sr-only">Campeonato de pilotos 2026: los cinco primeros tras 12 de 23 carreras</caption>
+              <thead>
+                <tr>
+                  <th scope="col" data-tipo="numero">Pos.</th>
+                  <th scope="col" data-tipo="texto">Piloto</th>
+                  <th scope="col" data-tipo="texto">Escudería</th>
+                  <th scope="col" data-tipo="numero" data-orden-inicial="descendente">Puntos</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td data-piloto="antonelli">Kimi Antonelli</td>
+                  <td data-escuderia="mercedes">Mercedes</td>
+                  <td>242</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td data-piloto="russell">George Russell</td>
+                  <td data-escuderia="mercedes">Mercedes</td>
+                  <td>183</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td data-piloto="hamilton">Lewis Hamilton</td>
+                  <td data-escuderia="ferrari">Ferrari</td>
+                  <td>183</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td data-piloto="norris">Lando Norris</td>
+                  <td data-escuderia="mclaren">McLaren</td>
+                  <td>159</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td data-piloto="leclerc">Charles Leclerc</td>
+                  <td data-escuderia="ferrari">Ferrari</td>
+                  <td>155</td>
+                </tr>
+              </tbody>
+
+              <tfoot>
+                <tr>
+                  <td colspan="3">Carreras disputadas</td>
+                  <td>12 de 23</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion">
+        <div class="contenedor">
+          <h2 class="titulo-seccion">Horario del fin de semana — GP de Italia</h2>
+
+          <div class="tabla-contenedor">
+            <table>
+              <caption class="sr-only">Horario de las sesiones del GP de Italia</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Día</th>
+                  <th scope="col">Sesión</th>
+                  <th scope="col">Hora</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td rowspan="2">Viernes</td>
+                  <td>Prácticas Libres 1</td>
+                  <td>12:30</td>
+                </tr>
+                <tr>
+                  <td>Prácticas Libres 2</td>
+                  <td>16:00</td>
+                </tr>
+                <tr>
+                  <td>Sábado</td>
+                  <td>Clasificación</td>
+                  <td>15:00</td>
+                </tr>
+                <tr>
+                  <td>Domingo</td>
+                  <td colspan="2">Carrera — 14:00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

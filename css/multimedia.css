@@ -1,0 +1,111 @@
+/* Grid multimedia */
+.multimedia-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+/* Tarjeta de video */
+.embed-card {
+    overflow: hidden;
+    background: white;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-lg);
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicion);
+}
+
+.embed-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-media);
+}
+
+/* Encabezado de tarjeta */
+.embed-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.embed-card-header .badge {
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+.embed-card-header h3,
+.embed-card-header .h3 {
+    margin: 0;
+}
+
+/* Frame de video */
+.embed-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+}
+
+.embed-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+/* Texto descriptivo bajo el video */
+.embed-caption {
+    padding: 16px 20px 20px;
+    color: var(--color-texto-suave);
+    font-size: 0.9rem;
+}
+
+/* Galería de fotos de la temporada */
+.galeria-multimedia {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.galeria-item {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: var(--radio-md);
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicion);
+}
+
+.galeria-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-media);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.08);
+}
+
+.galeria-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.78) 100%);
+}
+
+.galeria-item span {
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 12px;
+    z-index: 2;
+    color: white;
+    font-weight: 700;
+    font-size: 0.85rem;
+}

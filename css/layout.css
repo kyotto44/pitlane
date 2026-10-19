@@ -1,0 +1,45 @@
+/* Contenido principal */
+.main-content {
+    margin-top: var(--alto-header);
+    margin-left: var(--ancho-sidebar);
+    min-height: calc(100vh - var(--alto-header));
+}
+
+/* Barra lateral */
+.sidebar {
+    position: fixed;
+    top: var(--alto-header);
+    left: 0;
+    bottom: 0;
+
+    width: var(--ancho-sidebar);
+
+    overflow-y: auto;
+
+    background: var(--color-superficie);
+    border-right: 1px solid var(--color-borde);
+}
+
+/* Contenedor */
+.contenedor {
+    max-width: var(--ancho-contenido);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Sección */
+.seccion {
+    padding: 70px 0;
+}
+
+.grid-dos-columnas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.grid-tres-columnas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+

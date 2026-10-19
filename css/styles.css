@@ -1,0 +1,16 @@
+@import url("reset.css");
+@import url("variables.css");
+@import url("base.css");
+@import url("layout.css");
+@import url("header.css");
+@import url("sidebar.css");
+@import url("hero.css");
+@import url("componentes.css");
+@import url("formularios.css");
+@import url("grid.css");
+@import url("modal.css");
+@import url("multimedia.css");
+@import url("favoritos.css");
+@import url("accesibilidad.css");
+@import url("menu-movil.css");
+@import url("responsive.css");

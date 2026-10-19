@@ -1,0 +1,102 @@
+/* Accesibilidad: enlace para saltar al contenido, foco visible y movimiento reducido */
+
+/* Enlace "Saltar al contenido": aparece solo al navegar con teclado */
+.saltar-contenido {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: var(--capa-saltar);
+
+    padding: 12px 18px;
+
+    border-radius: var(--radio-sm);
+    background: var(--color-principal);
+    color: white;
+
+    font-weight: 700;
+    font-size: 0.9rem;
+
+    transform: translateY(-160%);
+    transition: transform 0.2s var(--ease-out);
+}
+
+.saltar-contenido:focus {
+    transform: none;
+}
+
+/* Foco visible para quien navega con teclado (el reset quitaba el outline de los campos) */
+:focus-visible {
+    outline: 3px solid var(--color-principal);
+    outline-offset: 3px;
+}
+
+.grupo-formulario input:focus-visible,
+.grupo-formulario select:focus-visible,
+.grupo-formulario textarea:focus-visible,
+.input-card input:focus-visible,
+.input-card select:focus-visible {
+    outline-width: 2px;
+    outline-offset: 2px;
+}
+
+/* Sobre fondos oscuros el anillo rojo se pierde: se usa blanco */
+.hero :focus-visible,
+.tabla-contenedor thead :focus-visible {
+    outline-color: white;
+}
+
+/* El <main> recibe el foco desde "Saltar al contenido"; no necesita anillo */
+#contenido:focus {
+    outline: none;
+}
+
+/* Texto solo para lectores de pantalla */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Respuesta al presionar botones */
+.boton:active,
+.boton-formulario:active,
+.menu-boton:active {
+    transform: scale(0.97);
+}
+
+/* Movimiento reducido: se quitan desplazamientos y escalas, se conservan los cambios de color y opacidad */
+@media (prefers-reduced-motion: reduce) {
+    .saltar-contenido {
+        transition: none;
+    }
+
+    .carrusel {
+        scroll-behavior: auto;
+    }
+
+    .tarjeta:hover,
+    .bolita:hover,
+    .bolita:hover img,
+    .carrusel-item:hover,
+    .parrilla-puesto:hover,
+    .embed-card:hover,
+    .galeria-item:hover,
+    .galeria-item:hover img,
+    .modal-cerrar:hover,
+    .boton:active,
+    .boton-formulario:active,
+    .menu-boton:active {
+        transform: none;
+    }
+
+    .modal-contenido,
+    .modal:target .modal-contenido {
+        transform: none;
+    }
+}

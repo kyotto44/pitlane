@@ -1,0 +1,332 @@
+<!doctype html>
+<!-- Página de circuitos icónicos del calendario de F1 -->
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circuitos | PitLane</title>
+    <meta name="description" content="Fichas de seis circuitos icónicos de la Fórmula 1: Mónaco, Monza, Spa-Francorchamps, Silverstone, Suzuka e Interlagos." />
+    <meta property="og:title" content="Circuitos | PitLane" />
+    <meta property="og:description" content="Fichas de seis circuitos icónicos de la Fórmula 1: Mónaco, Monza, Spa-Francorchamps, Silverstone, Suzuka e Interlagos." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:site_name" content="PitLane" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,500;1,600&amp;family=Orbitron:wght@700;800;900&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/almacen.js"></script>
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/favoritos.js"></script>
+    <script defer src="js/modales.js"></script>
+  </head>
+
+  <body>
+    <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+
+    <header class="topbar">
+      <a href="index.html" class="logo">
+        <img src="imagenes/logo.webp" alt="" class="logo-icono" width="220" height="220">
+        <span>Pit<strong>Lane</strong></span>
+      </a>
+
+      <nav aria-label="Menú principal">
+        <ul class="menu-superior">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="pilotos.html">Pilotos</a></li>
+          <li><a href="clasificacion.html">Clasificación</a></li>
+          <li><a href="equipos.html">Escuderías</a></li>
+          <li><a href="multimedia.html">Multimedia</a></li>
+          <li><a href="resumen.html">Resumen del GP</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu-lateral">
+        <span class="menu-boton-icono" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>Menú</span>
+      </button>
+    </header>
+
+    <aside class="sidebar" id="menu-lateral">
+      <nav aria-label="Secciones de PitLane">
+        <div class="sidebar-grupo">
+          <p class="sidebar-titulo">PITLANE</p>
+          <a href="index.html"><span>01</span>Inicio</a>
+          <a href="pilotos.html"><span>02</span>Pilotos</a>
+          <a href="clasificacion.html"><span>03</span>Clasificación</a>
+          <a href="club.html"><span>04</span>Club de fans</a>
+          <a href="preferencias.html"><span>05</span>Preferencias</a>
+          <a href="equipos.html"><span>06</span>Escuderías</a>
+          <a href="circuitos.html" class="activo" aria-current="page"><span>07</span>Circuitos</a>
+          <a href="fichas.html"><span>08</span>Fichas rápidas</a>
+          <a href="multimedia.html"><span>09</span>Multimedia</a>
+          <a href="resumen.html"><span>10</span>Resumen del GP</a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content" id="contenido" tabindex="-1">
+      <section class="seccion">
+        <div class="contenedor">
+          <h1 class="titulo-pagina titulo-seccion">Circuitos icónicos del calendario</h1>
+
+          <div class="galeria-bolitas">
+            <a href="#modal-monaco" class="bolita-item">
+              <div class="bolita"><img src="imagenes/circuitos/monaco.webp" alt="Circuito de Mónaco" width="180" height="112" decoding="async"></div>
+              <strong>Mónaco</strong>
+              <p>3.337 km · 78 vueltas</p>
+            </a>
+
+            <a href="#modal-monza" class="bolita-item">
+              <div class="bolita"><img src="imagenes/circuitos/monza.webp" alt="Circuito de Monza" width="459" height="459" decoding="async"></div>
+              <strong>Monza</strong>
+              <p>5.793 km · 53 vueltas</p>
+            </a>
+
+            <a href="#modal-spa" class="bolita-item">
+              <div class="bolita"><img src="imagenes/circuitos/spa.webp" alt="Circuito de Spa-Francorchamps" width="180" height="117" decoding="async"></div>
+              <strong>Spa-Francorchamps</strong>
+              <p>7.004 km · 44 vueltas</p>
+            </a>
+
+            <a href="#modal-silverstone" class="bolita-item">
+              <div class="bolita"><img src="imagenes/circuitos/silverstone.webp" alt="Circuito de Silverstone" width="180" height="112" decoding="async"></div>
+              <strong>Silverstone</strong>
+              <p>5.891 km · 52 vueltas</p>
+            </a>
+
+            <a href="#modal-suzuka" class="bolita-item">
+              <div class="bolita"><img src="imagenes/circuitos/suzuka.webp" alt="Circuito de Suzuka" width="180" height="110" decoding="async"></div>
+              <strong>Suzuka</strong>
+              <p>5.807 km · 53 vueltas</p>
+            </a>
+
+            <a href="#modal-interlagos" class="bolita-item">
+              <div class="bolita"><img src="imagenes/circuitos/interlagos.webp" alt="Circuito de Interlagos" width="173" height="180" decoding="async"></div>
+              <strong>Interlagos</strong>
+              <p>4.309 km · 71 vueltas</p>
+            </a>
+          </div>
+
+          <p class="pista-ayuda">Toca un circuito para ver su ficha completa.</p>
+        </div>
+      </section>
+
+      <section class="seccion">
+        <div class="contenedor">
+          <h2 class="titulo-seccion" id="titulo-monza">Próxima parada: Monza</h2>
+
+          <div class="carrusel" role="region" aria-labelledby="titulo-monza" tabindex="0">
+            <article class="carrusel-item">
+              <h3>Templo de la velocidad</h3>
+              <p>El circuito con las rectas más largas del calendario, en el corazón del bosque de Monza.</p>
+            </article>
+
+            <article class="carrusel-item">
+              <h3>Récord de velocidad punta</h3>
+              <p>Los monoplazas superan los 360 km/h antes de frenar en la primera chicane.</p>
+            </article>
+
+            <article class="carrusel-item">
+              <h3>Casa de la Tifosi</h3>
+              <p>La afición de Ferrari invade las gradas cada año de rojo de pies a cabeza.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div id="modal-monaco" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-monaco-titulo">
+        <a href="#cerrar" class="modal-fondo" tabindex="-1" aria-hidden="true"></a>
+        <article class="modal-contenido">
+          <header class="modal-header">
+            <h3 id="modal-monaco-titulo">Circuito de Mónaco</h3>
+            <a href="#cerrar" class="modal-cerrar" aria-label="Cerrar ventana">&times;</a>
+          </header>
+          <div class="modal-body">
+            <div class="modal-circuito-cabecera">
+              <div class="bolita"><img src="imagenes/circuitos/monaco.webp" alt="Circuito de Mónaco" width="180" height="112" loading="lazy" decoding="async"></div>
+            </div>
+            <p>Las calles del Principado albergan el trazado más lento y
+            estrecho del calendario, donde la precisión pesa más que la
+            velocidad punta.</p>
+            <div class="tabla-contenedor">
+              <table>
+                <tbody>
+                  <tr><td>Longitud</td><td>3.337 km</td></tr>
+                  <tr><td>Vueltas</td><td>78</td></tr>
+                  <tr><td>Curvas</td><td>19</td></tr>
+                  <tr><td>Primera carrera</td><td>1950</td></tr>
+                  <tr><td>Vuelta rápida</td><td>1:12.909 — Hamilton (2021)</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <footer class="modal-footer">
+            <a href="#cerrar" class="boton boton-secundario">Cerrar</a>
+          </footer>
+        </article>
+      </div>
+
+      <div id="modal-monza" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-monza-titulo">
+        <a href="#cerrar" class="modal-fondo" tabindex="-1" aria-hidden="true"></a>
+        <article class="modal-contenido">
+          <header class="modal-header">
+            <h3 id="modal-monza-titulo">Autodromo Nazionale Monza</h3>
+            <a href="#cerrar" class="modal-cerrar" aria-label="Cerrar ventana">&times;</a>
+          </header>
+          <div class="modal-body">
+            <div class="modal-circuito-cabecera">
+              <div class="bolita"><img src="imagenes/circuitos/monza.webp" alt="Circuito de Monza" width="459" height="459" loading="lazy" decoding="async"></div>
+            </div>
+            <p>Conocido como el «Templo de la velocidad», sus largas rectas
+            en el corazón del Parco di Monza lo convierten en el circuito
+            más rápido del calendario.</p>
+            <div class="tabla-contenedor">
+              <table>
+                <tbody>
+                  <tr><td>Longitud</td><td>5.793 km</td></tr>
+                  <tr><td>Vueltas</td><td>53</td></tr>
+                  <tr><td>Curvas</td><td>11</td></tr>
+                  <tr><td>Primera carrera</td><td>1950</td></tr>
+                  <tr><td>Vuelta rápida</td><td>1:21.046 — Barrichello (2004)</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <footer class="modal-footer">
+            <a href="#cerrar" class="boton boton-secundario">Cerrar</a>
+          </footer>
+        </article>
+      </div>
+
+      <div id="modal-spa" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-spa-titulo">
+        <a href="#cerrar" class="modal-fondo" tabindex="-1" aria-hidden="true"></a>
+        <article class="modal-contenido">
+          <header class="modal-header">
+            <h3 id="modal-spa-titulo">Spa-Francorchamps</h3>
+            <a href="#cerrar" class="modal-cerrar" aria-label="Cerrar ventana">&times;</a>
+          </header>
+          <div class="modal-body">
+            <div class="modal-circuito-cabecera">
+              <div class="bolita"><img src="imagenes/circuitos/spa.webp" alt="Circuito de Spa-Francorchamps" width="180" height="117" loading="lazy" decoding="async"></div>
+            </div>
+            <p>El circuito más largo del calendario, escondido entre las
+            colinas de las Ardenas belgas y famoso por el temido tramo de
+            Eau Rouge-Raidillon.</p>
+            <div class="tabla-contenedor">
+              <table>
+                <tbody>
+                  <tr><td>Longitud</td><td>7.004 km</td></tr>
+                  <tr><td>Vueltas</td><td>44</td></tr>
+                  <tr><td>Curvas</td><td>19</td></tr>
+                  <tr><td>Primera carrera</td><td>1950</td></tr>
+                  <tr><td>Vuelta rápida</td><td>1:46.286 — Bottas (2018)</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <footer class="modal-footer">
+            <a href="#cerrar" class="boton boton-secundario">Cerrar</a>
+          </footer>
+        </article>
+      </div>
+
+      <div id="modal-silverstone" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-silverstone-titulo">
+        <a href="#cerrar" class="modal-fondo" tabindex="-1" aria-hidden="true"></a>
+        <article class="modal-contenido">
+          <header class="modal-header">
+            <h3 id="modal-silverstone-titulo">Silverstone Circuit</h3>
+            <a href="#cerrar" class="modal-cerrar" aria-label="Cerrar ventana">&times;</a>
+          </header>
+          <div class="modal-body">
+            <div class="modal-circuito-cabecera">
+              <div class="bolita"><img src="imagenes/circuitos/silverstone.webp" alt="Circuito de Silverstone" width="180" height="112" loading="lazy" decoding="async"></div>
+            </div>
+            <p>Cuna de la Fórmula 1: en 1950 fue sede de la primera carrera
+            del campeonato mundial y sigue siendo uno de los trazados más
+            veloces y técnicos del calendario.</p>
+            <div class="tabla-contenedor">
+              <table>
+                <tbody>
+                  <tr><td>Longitud</td><td>5.891 km</td></tr>
+                  <tr><td>Vueltas</td><td>52</td></tr>
+                  <tr><td>Curvas</td><td>18</td></tr>
+                  <tr><td>Primera carrera</td><td>1950</td></tr>
+                  <tr><td>Vuelta rápida</td><td>1:27.097 — Verstappen (2020)</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <footer class="modal-footer">
+            <a href="#cerrar" class="boton boton-secundario">Cerrar</a>
+          </footer>
+        </article>
+      </div>
+
+      <div id="modal-suzuka" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-suzuka-titulo">
+        <a href="#cerrar" class="modal-fondo" tabindex="-1" aria-hidden="true"></a>
+        <article class="modal-contenido">
+          <header class="modal-header">
+            <h3 id="modal-suzuka-titulo">Circuito de Suzuka</h3>
+            <a href="#cerrar" class="modal-cerrar" aria-label="Cerrar ventana">&times;</a>
+          </header>
+          <div class="modal-body">
+            <div class="modal-circuito-cabecera">
+              <div class="bolita"><img src="imagenes/circuitos/suzuka.webp" alt="Circuito de Suzuka" width="180" height="110" loading="lazy" decoding="async"></div>
+            </div>
+            <p>El único trazado del calendario con forma de ocho, gracias a
+            su característico cruce a desnivel, y uno de los favoritos de
+            los pilotos por su fluidez técnica.</p>
+            <div class="tabla-contenedor">
+              <table>
+                <tbody>
+                  <tr><td>Longitud</td><td>5.807 km</td></tr>
+                  <tr><td>Vueltas</td><td>53</td></tr>
+                  <tr><td>Curvas</td><td>18</td></tr>
+                  <tr><td>Primera carrera</td><td>1987</td></tr>
+                  <tr><td>Vuelta rápida</td><td>1:30.983 — Hamilton (2019)</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <footer class="modal-footer">
+            <a href="#cerrar" class="boton boton-secundario">Cerrar</a>
+          </footer>
+        </article>
+      </div>
+
+      <div id="modal-interlagos" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-interlagos-titulo">
+        <a href="#cerrar" class="modal-fondo" tabindex="-1" aria-hidden="true"></a>
+        <article class="modal-contenido">
+          <header class="modal-header">
+            <h3 id="modal-interlagos-titulo">Autódromo de Interlagos</h3>
+            <a href="#cerrar" class="modal-cerrar" aria-label="Cerrar ventana">&times;</a>
+          </header>
+          <div class="modal-body">
+            <div class="modal-circuito-cabecera">
+              <div class="bolita"><img src="imagenes/circuitos/interlagos.webp" alt="Circuito de Interlagos" width="173" height="180" loading="lazy" decoding="async"></div>
+            </div>
+            <p>Trazado en sentido antihorario en Sao Paulo, con desniveles
+            pronunciados y un clima cambiante que suele regalar carreras
+            impredecibles.</p>
+            <div class="tabla-contenedor">
+              <table>
+                <tbody>
+                  <tr><td>Longitud</td><td>4.309 km</td></tr>
+                  <tr><td>Vueltas</td><td>71</td></tr>
+                  <tr><td>Curvas</td><td>15</td></tr>
+                  <tr><td>Primera carrera</td><td>1973</td></tr>
+                  <tr><td>Vuelta rápida</td><td>1:10.540 — Bottas (2018)</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <footer class="modal-footer">
+            <a href="#cerrar" class="boton boton-secundario">Cerrar</a>
+          </footer>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>

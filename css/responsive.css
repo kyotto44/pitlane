@@ -1,0 +1,102 @@
+/* Media queries - Responsive design */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1050px) {
+    :root {
+        --ancho-sidebar: 220px;
+    }
+
+    .hero-grid,
+    .grid-dos-columnas,
+    .multimedia-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-tres-columnas,
+    .galeria-multimedia {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets pequeñas y móviles */
+@media (max-width: 850px) {
+    /* La barra lateral ya no se oculta sin más: se convierte en el menú móvil (menu-movil.css) */
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .menu-superior {
+        display: none;
+    }
+
+    .contenedor {
+        width: min(calc(100% - 36px), var(--ancho-contenido));
+    }
+
+    .catalogo-inputs,
+    .fila-formulario,
+    .grid-tres-columnas,
+    .galeria-multimedia,
+    .parrilla-salida {
+        grid-template-columns: 1fr;
+    }
+
+    .parrilla-puesto:nth-child(even) {
+        margin-top: 0;
+    }
+}
+
+/* Móviles */
+@media (max-width: 560px) {
+    :root {
+        --alto-header: 84px;
+    }
+
+    .topbar {
+        padding-inline: 18px;
+    }
+
+    .logo-icono {
+        width: 64px;
+        height: 64px;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+        gap: 8px;
+    }
+
+    /* Menos margen doble a los lados para que el contenido respire en 390px */
+    .contenedor {
+        padding: 0 4px;
+    }
+
+    /* Tablas más compactas: las cuatro columnas de la clasificación caben sin desplazarse */
+    .tabla-contenedor table {
+        font-size: 0.92rem;
+    }
+
+    .tabla-contenedor th,
+    .tabla-contenedor td,
+    .orden-boton {
+        padding: 12px 8px;
+    }
+
+    .orden-boton {
+        gap: 5px;
+    }
+
+    .formulario,
+    .estado-exito {
+        padding: 22px 18px;
+    }
+
+    .hero {
+        padding-top: 60px;
+    }
+
+    .acciones-hero {
+        flex-direction: column;
+    }
+}
