@@ -11,7 +11,7 @@
   for = "/*"
   [headers.values]
     # Solo se cargan recursos de este sitio y de los servicios que se usan a propósito.
-    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://www.google.com https://maps.google.com https://consent.google.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; frame-src https://www.youtube.com https://www.google.com https://maps.google.com https://consent.google.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
     # No dejar que otras páginas metan este sitio en un iframe (clickjacking y robo de ancho de banda).
     X-Frame-Options = "DENY"
     # El navegador no adivina tipos de archivo.
